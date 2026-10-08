@@ -8,7 +8,7 @@ An embeddable "Book your free consultation" widget for glowpronj.com (WordPress/
 
 ## Users
 - **Owner (first viewer):** Glow Pro Exterior Lighting LLC. Today their site only offers "fill out our contact form or call". They need to see the widget in their own brand, working, within one screen.
-- **Homeowners and businesses in Ocean and Monmouth County, NJ** (Toms River, Brick, Seaside Heights, Point Pleasant, Freehold, Middletown, Manasquan, and nearby) who want holiday or year-round exterior lighting and are mostly on phones.
+- **Homeowners and businesses in Ocean and Monmouth County, NJ** (Toms River, Brick, Point Pleasant, Manchester, Lacey, Berkeley, Jackson, Barnegat, Beachwood, Seaside Heights, Freehold, Middletown, Manalapan, Marlboro, Holmdel, Wall, Manasquan, Long Branch, Red Bank, Colts Neck — per glowpronj.com) who want holiday or year-round exterior lighting and are mostly on phones.
 
 ## Purpose
 Turn a visit into a consultation request in under a minute: pick a service, give name, phone, address, preferred week, and hand off a pre-filled text message to (609) 222-8146. Tap-to-call as fallback.
@@ -18,7 +18,8 @@ Their own site's words: "From holiday displays to permanent architectural lighti
 
 ## Capabilities and constraints
 - Services (their wording, shortened for the picker): residential holiday/Christmas light installation; year-round exterior and landscape lighting; permanent LED / smart color-changing systems; commercial exterior and holiday lighting. Add-ons: tree wrapping, pathway, security/motion, smart timers.
-- Output is an `sms:` link only. No server, no storage, no analytics.
+- Whether (609) 222-8146 accepts texts is unknown (brief, 2026-10-08), so every SMS path has a call and email (Info@glowpronj.com) fallback.
+- Output is an `sms:` link (plus a pre-filled mailto fallback). No server, no storage, no analytics.
 - Must embed in WordPress (iframe or Custom HTML block) without leaking styles into their theme.
 - Urgency line ("Holiday slots fill fast — book early") is a toggle, never a fake deadline.
 
@@ -29,7 +30,9 @@ Their own site's words: "From holiday displays to permanent architectural lighti
 
 ## Evidence on hand
 - Phone (609) 222-8146, email Info@glowpronj.com, service area towns, services list, 3-step process copy: from brief and glowpronj.com.
-- No reviews, no prices used. Their site's early-booking discount ended September 30 (inferred stale as of 2026-10-08); not used.
+- Photos: work-01 from glowpronj.com (night roofline install, clean) is used; work-02 (vehicle in frame) and work-03 (two people in frame) are not.
+- Three testimonials exist on their own site (Sarah M., Mike D., Lauren P.); not used on the page yet.
+- No prices used. Their site's early-booking discount ended September 30 (inferred stale as of 2026-10-08); not used.
 
 ## Principles
 1. Their business, done better, inside one screen.
