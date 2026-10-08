@@ -43,6 +43,13 @@
 - The homepage still advertises **"Reserve your spot before September 30 for 10% off … plus an extra $200 off"**, which is now expired. The banner "Get 10% Off Your Christmas Light Installation!" is still up.
 - One "Why choose" list repeats "Complete all inclusive package…" four times.
 
+## Phone-first pass (2026-10-08, Ellie's rule relayed from the blessedMobileDetailing session)
+- CSS rewritten phone-first: base styles target 360–430px, then `min-width: 521px` and `min-width: 961px` layers.
+- First phone screen: logo, a call pill, the headline, the pitch (what and where) and the lit roofline. On short phones a sticky dock adds **Book free consultation** (jumps to the card) and a 56px call button. The dock hides while the picker or the card's buttons are on screen, while someone is typing, and in embed mode.
+- Sizes: buttons 56px tall, chips and links 44px+, inputs 52px. Text is 16px for body and inputs, never under 14px. No sideways scroll at 360px (checked programmatically).
+- The photo's data loads after the scripts, so the card and contact buttons work first. Copy buttons report when the clipboard is blocked (Facebook's in-app browser) and point to press-and-hold instead.
+- Repo visibility: **private** (created before the public-repo rule; left as is). `brief.md` and Muse's `TRIGGER.md` were committed in the first two commits. Both are now untracked and gitignored but still in history. Raw `src-assets/` was never committed.
+
 ## Review round (finish reviewer, 2026-10-08)
 - Applied:
   - roofline in the first viewport
