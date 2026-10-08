@@ -1,6 +1,6 @@
 # Glow Pro Exterior Lighting — handoff at ~60%
 
-**Live file:** index.html · **Repo:** https://github.com/10elizabethbell/glowProExteriorLighting (private) · **Built:** 2026-10-08 from Muse brief (brief.md, Muse run 2026-10-08; the brief was revised mid-build and the build follows the revision)
+**Live:** https://10elizabethbell.github.io/glowProExteriorLighting/ (widget only: `?embed=1`) · **Repo:** https://github.com/10elizabethbell/glowProExteriorLighting (public) · **Built:** 2026-10-08 from Muse brief (brief.md, Muse run 2026-10-08; the brief was revised mid-build and the build follows the revision)
 
 ## What's built
 - **Widget, not a site.** Per the brief, this is an embeddable "Book your free consultation" card for glowpronj.com, shown on a short demo page. `index.html?embed=1` renders only the card (transparent background), and `&urgency=off` hides the holiday line.
@@ -48,7 +48,7 @@
 - First phone screen: logo, a call pill, the headline, the pitch (what and where) and the lit roofline. On short phones a sticky dock adds **Book free consultation** (jumps to the card) and a 56px call button. The dock hides while the picker or the card's buttons are on screen, while someone is typing, and in embed mode.
 - Sizes: buttons 56px tall, chips and links 44px+, inputs 52px. Text is 16px for body and inputs, never under 14px. No sideways scroll at 360px (checked programmatically).
 - The photo's data loads after the scripts, so the card and contact buttons work first. Copy buttons report when the clipboard is blocked (Facebook's in-app browser) and point to press-and-hold instead.
-- Repo visibility: **private** (created before the public-repo rule; left as is). `brief.md` and Muse's `TRIGGER.md` were committed in the first two commits. Both are now untracked and gitignored but still in history. Raw `src-assets/` was never committed.
+- Repo visibility: **public** since 2026-10-08 (Ellie's call), with GitHub Pages serving main / root. `brief.md` and Muse's `TRIGGER.md` were committed in the first two commits. Both are now untracked and gitignored but still in history. Raw `src-assets/` was never committed.
 
 ## Review round (finish reviewer, 2026-10-08)
 - Applied:
