@@ -1,0 +1,534 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-08T11:48:16+00:00",
+  "title": "Design System: Glow Pro Booking Widget",
+  "extensions": {
+    "colorMeta": {
+      "signal-red": {
+        "role": "primary",
+        "displayName": "Signal Red",
+        "canonical": "#e0262b",
+        "oklch": "oklch(58.5% 0.218 26)",
+        "tonalRamp": [
+          "#300000",
+          "#6c0000",
+          "#950000",
+          "#be0004",
+          "#e83132",
+          "#ff5d56",
+          "#ff857a",
+          "#ffccc0"
+        ]
+      },
+      "signal-red-hot": {
+        "role": "primary",
+        "displayName": "Signal Red Hot",
+        "canonical": "#f23a3f",
+        "oklch": "oklch(63.3% 0.219 25)",
+        "tonalRamp": [
+          "#300000",
+          "#6c0000",
+          "#950000",
+          "#bf000f",
+          "#e92f37",
+          "#ff5c5a",
+          "#ff847d",
+          "#ffcbc2"
+        ]
+      },
+      "bulb-warm": {
+        "role": "secondary",
+        "displayName": "Bulb Warm Gold",
+        "canonical": "#ffd27a",
+        "oklch": "oklch(88.5% 0.118 83)",
+        "tonalRamp": [
+          "#190600",
+          "#3f1a00",
+          "#603900",
+          "#815900",
+          "#a47b17",
+          "#c99e44",
+          "#efc26a",
+          "#ffebb9"
+        ]
+      },
+      "bulb-red": {
+        "role": "tertiary",
+        "displayName": "Bulb Red",
+        "canonical": "#ff2d2d",
+        "oklch": "oklch(64.5% 0.241 27)",
+        "tonalRamp": [
+          "#330000",
+          "#720000",
+          "#9c0000",
+          "#c60000",
+          "#f1141e",
+          "#ff4f47",
+          "#ff7a6c",
+          "#ffc8b9"
+        ]
+      },
+      "bulb-white": {
+        "role": "tertiary",
+        "displayName": "Bulb Warm White",
+        "canonical": "#fff1cc",
+        "oklch": "oklch(96.0% 0.050 90)",
+        "tonalRamp": [
+          "#100a00",
+          "#2f2403",
+          "#4c4121",
+          "#6c6040",
+          "#8e8160",
+          "#b1a481",
+          "#d6c8a4",
+          "#f6eed8"
+        ]
+      },
+      "bulb-blue": {
+        "role": "tertiary",
+        "displayName": "Bulb Blue",
+        "canonical": "#2aa6ff",
+        "oklch": "oklch(70.2% 0.166 246)",
+        "tonalRamp": [
+          "#000731",
+          "#001d6f",
+          "#004193",
+          "#0064b8",
+          "#0088de",
+          "#33acff",
+          "#5fd2ff",
+          "#b7f6ff"
+        ]
+      },
+      "night": {
+        "role": "neutral",
+        "displayName": "Winter Night",
+        "canonical": "#0d1a35",
+        "oklch": "oklch(22.3% 0.056 263)",
+        "tonalRamp": [
+          "#050b19",
+          "#162440",
+          "#324260",
+          "#516181",
+          "#7183a5",
+          "#93a5c9",
+          "#b6caee",
+          "#e3efff"
+        ]
+      },
+      "night-sky": {
+        "role": "neutral",
+        "displayName": "Horizon Glow",
+        "canonical": "#16295a",
+        "oklch": "oklch(29.6% 0.092 265)",
+        "tonalRamp": [
+          "#030922",
+          "#0f2151",
+          "#2a3f72",
+          "#485f95",
+          "#6881ba",
+          "#89a4df",
+          "#acc9ff",
+          "#ddefff"
+        ]
+      },
+      "house": {
+        "role": "neutral",
+        "displayName": "House Navy",
+        "canonical": "#14254a",
+        "oklch": "oklch(27.2% 0.072 264)",
+        "tonalRamp": [
+          "#030a1d",
+          "#122348",
+          "#2e4168",
+          "#4c618b",
+          "#6c82ae",
+          "#8ea5d3",
+          "#b1c9f9",
+          "#e0efff"
+        ]
+      },
+      "card": {
+        "role": "neutral",
+        "displayName": "Card Navy",
+        "canonical": "#122248",
+        "oklch": "oklch(26.2% 0.074 265)",
+        "tonalRamp": [
+          "#030a1e",
+          "#132349",
+          "#2e4169",
+          "#4c608c",
+          "#6c82af",
+          "#8ea5d4",
+          "#b1c9fa",
+          "#e0efff"
+        ]
+      },
+      "well": {
+        "role": "neutral",
+        "displayName": "Input Well",
+        "canonical": "#0a1530",
+        "oklch": "oklch(20.3% 0.056 265)",
+        "tonalRamp": [
+          "#050a19",
+          "#182440",
+          "#334160",
+          "#526182",
+          "#7282a5",
+          "#94a5c9",
+          "#b8c9ef",
+          "#e4efff"
+        ]
+      },
+      "well-selected": {
+        "role": "neutral",
+        "displayName": "Lifted Well",
+        "canonical": "#1c2f5e",
+        "oklch": "oklch(31.7% 0.087 265)",
+        "tonalRamp": [
+          "#030921",
+          "#10214f",
+          "#2b4070",
+          "#496093",
+          "#6981b7",
+          "#8ba4dd",
+          "#aec9ff",
+          "#deefff"
+        ]
+      },
+      "edge": {
+        "role": "neutral",
+        "displayName": "Edge",
+        "canonical": "#2e4273",
+        "oklch": "oklch(38.8% 0.087 266)",
+        "tonalRamp": [
+          "#030921",
+          "#10214f",
+          "#2c3f70",
+          "#495f93",
+          "#6981b7",
+          "#8ba4dd",
+          "#aec9ff",
+          "#deefff"
+        ]
+      },
+      "edge-hover": {
+        "role": "neutral",
+        "displayName": "Edge Hover",
+        "canonical": "#4a609a",
+        "oklch": "oklch(49.8% 0.097 267)",
+        "tonalRamp": [
+          "#030823",
+          "#101f53",
+          "#2b3e75",
+          "#495e98",
+          "#6880bd",
+          "#8aa3e2",
+          "#adc8ff",
+          "#ddeeff"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Cream",
+        "canonical": "#f6f0e3",
+        "oklch": "oklch(95.6% 0.018 86)",
+        "tonalRamp": [
+          "#0d0b06",
+          "#29251b",
+          "#464137",
+          "#666156",
+          "#878276",
+          "#aaa498",
+          "#cec9bc",
+          "#f2eee6"
+        ]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Mist",
+        "canonical": "#b7c3de",
+        "oklch": "oklch(81.7% 0.040 266)",
+        "tonalRamp": [
+          "#070b15",
+          "#1c2439",
+          "#384258",
+          "#576179",
+          "#77829b",
+          "#99a5bf",
+          "#bdc9e4",
+          "#e7efff"
+        ]
+      },
+      "placeholder": {
+        "role": "neutral",
+        "displayName": "Placeholder Mist",
+        "canonical": "#8f9fc4",
+        "oklch": "oklch(70.3% 0.057 267)",
+        "tonalRamp": [
+          "#050a1a",
+          "#182341",
+          "#344161",
+          "#526182",
+          "#7382a6",
+          "#95a5ca",
+          "#b8c9f0",
+          "#e4efff"
+        ]
+      },
+      "err-text": {
+        "role": "neutral",
+        "displayName": "Error Salmon",
+        "canonical": "#ffb0a6",
+        "oklch": "oklch(83.0% 0.094 27)",
+        "tonalRamp": [
+          "#1e0101",
+          "#490908",
+          "#6b2a25",
+          "#8f4a43",
+          "#b46b63",
+          "#da8e85",
+          "#ffb2a8",
+          "#ffe1da"
+        ]
+      },
+      "err-edge": {
+        "role": "neutral",
+        "displayName": "Error Edge",
+        "canonical": "#ff7a70",
+        "oklch": "oklch(73.3% 0.164 26)",
+        "tonalRamp": [
+          "#280000",
+          "#5d0000",
+          "#840005",
+          "#ab2c2a",
+          "#d3524b",
+          "#fb766d",
+          "#ff9b8f",
+          "#ffd5cc"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero H1 only; uppercase Anton, second clause in Warm Gold."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section H2s; uppercase Anton."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Booking card H2 (29px at <=520px) and embed-section H3 (30px)."
+      },
+      "title-sm": {
+        "displayName": "Title Small",
+        "purpose": "Done-state heading (gold) and footer business name."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All reading text; 16px keeps iOS from zooming inputs."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Legends, field labels, urgency line; 650 is the house emphasis weight."
+      },
+      "meta": {
+        "displayName": "Meta",
+        "purpose": "Hints, notes, inline errors (13-13.5px)."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card-lift",
+        "value": "0 34px 70px -24px rgba(2,7,20,.8), 0 8px 22px -10px rgba(2,7,20,.5)",
+        "purpose": "Booking card only."
+      },
+      {
+        "name": "panel-lift",
+        "value": "0 18px 40px -22px rgba(2,7,20,.9)",
+        "purpose": "Embed code panel."
+      },
+      {
+        "name": "primary-press",
+        "value": "0 10px 22px -12px rgba(2,7,20,.8)",
+        "purpose": "Red primary button."
+      },
+      {
+        "name": "tile-selected",
+        "value": "0 8px 18px -10px rgba(2,7,20,.7)",
+        "purpose": "Checked service tile."
+      },
+      {
+        "name": "bulb-glow",
+        "value": "0 2px 8px rgba(<bulb rgb>, .55)",
+        "purpose": "CSS .dot bulbs only; colored glow is reserved for bulbs."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state",
+        "value": ".18s (colors), .12s (press transform), .25s (tile shadow)",
+        "purpose": "Control hover/checked/focus transitions."
+      },
+      {
+        "name": "ease-rise",
+        "value": "cubic-bezier(.16, 1, .3, 1) .5s",
+        "purpose": "Done-state entrance (8px rise + fade)."
+      },
+      {
+        "name": "blink",
+        "value": "2.4s ease-in-out infinite, opacity 1 -> .35",
+        "purpose": "Urgency-line red dot."
+      },
+      {
+        "name": "verlet-strings",
+        "value": "TUNE {gravity .32, damping .975, windBase .05, windGust .045, windSpeed 1.9, pushRadius 95, push 2.4, carry .16, twinkle .16, snowDesktop 46, snowPhone 18}",
+        "purpose": "All canvas light strings on one shared rAF loop; IntersectionObserver pauses offscreen; off under prefers-reduced-motion."
+      },
+      {
+        "name": "bulb-on",
+        "value": "on += (lit - on) * .12 per frame; pop .6 (progress) / .9 (cheer), decays *.9",
+        "purpose": "Bulb light-up easing for card progress and submit chase (45ms/bulb card, 18ms/bulb others)."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone",
+        "value": "520px"
+      },
+      {
+        "name": "stacked",
+        "value": "960px"
+      },
+      {
+        "name": "canvas-phone",
+        "value": "700px (canvas width; smaller bulbs, tighter clips, less snow)"
+      }
+    ],
+    "modes": [
+      {
+        "name": "embed",
+        "value": "?embed=1 -> html.is-embed",
+        "purpose": "Card only, transparent ground, max 480px; posts gpw-height / gpw-done to parent; links target _top."
+      },
+      {
+        "name": "no-urgency",
+        "value": "&urgency=off -> html.no-urgency",
+        "purpose": "Hides the holiday urgency line; URGENCY/URGENCY_TEXT constants in the widget script."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one commit action per view; logo red.",
+      "html": "<button class=\"ds-btn ds-btn-go\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 5.5h16v10.5H9.5L5 20v-4H4z\"/><path d=\"M8 9.5h8M8 12.5h5\"/></svg>Text my request</button>",
+      "css": ":host{--night:#0d1a35;--card:#122248;--well:#0a1530;--edge:#2e4273;--cream:#f6f0e3;--mist:#b7c3de;--red:#e0262b;--red-hot:#f23a3f;--warm:#ffd27a;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#f6f0e3}.ds-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;height:54px;padding:0 18px;border-radius:14px;border:1.5px solid transparent;font:650 17px -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;cursor:pointer;transition:background-color .18s,border-color .18s,transform .12s}.ds-btn:active{transform:translateY(1px)}.ds-btn:focus-visible{outline:2px solid #ffd27a;outline-offset:3px}.ds-btn-go{background:#e0262b;border-color:rgba(246,240,227,.55);color:#fff;box-shadow:0 10px 22px -12px rgba(2,7,20,.8)}.ds-btn-go:hover{background:#f23a3f;border-color:#f6f0e3}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary actions: call, copy message.",
+      "html": "<button class=\"ds-btn ds-btn-alt\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 3.5h3.2l1.6 4.2-2.1 1.4a11 11 0 0 0 7.2 7.2l1.4-2.1 4.2 1.6V19a1.6 1.6 0 0 1-1.6 1.6A16.6 16.6 0 0 1 3.4 5.1 1.6 1.6 0 0 1 5 3.5z\"/></svg>Call (609) 222-8146</button>",
+      "css": ":host{--night:#0d1a35;--card:#122248;--well:#0a1530;--edge:#2e4273;--cream:#f6f0e3;--mist:#b7c3de;--red:#e0262b;--red-hot:#f23a3f;--warm:#ffd27a;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#f6f0e3}.ds-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;height:54px;padding:0 18px;border-radius:14px;border:1.5px solid transparent;font:650 17px -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;cursor:pointer;transition:background-color .18s,border-color .18s,transform .12s}.ds-btn:active{transform:translateY(1px)}.ds-btn:focus-visible{outline:2px solid #ffd27a;outline-offset:3px}.ds-btn-alt{background:transparent;border-color:rgba(246,240,227,.55);color:#f6f0e3}.ds-btn-alt:hover{background:rgba(246,240,227,.07);border-color:#f6f0e3}"
+    },
+    {
+      "name": "Call Pill",
+      "kind": "nav",
+      "refersTo": "button-call",
+      "description": "Top-bar phone link.",
+      "html": "<a class=\"ds-call\" href=\"#\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 3.5h3.2l1.6 4.2-2.1 1.4a11 11 0 0 0 7.2 7.2l1.4-2.1 4.2 1.6V19a1.6 1.6 0 0 1-1.6 1.6A16.6 16.6 0 0 1 3.4 5.1 1.6 1.6 0 0 1 5 3.5z\"/></svg>(609) 222-8146</a>",
+      "css": ":host{--night:#0d1a35;--card:#122248;--well:#0a1530;--edge:#2e4273;--cream:#f6f0e3;--mist:#b7c3de;--red:#e0262b;--red-hot:#f23a3f;--warm:#ffd27a;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#f6f0e3}.ds-call{display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 16px;border:1.5px solid rgba(246,240,227,.5);border-radius:999px;color:#f6f0e3;font-weight:650;font-size:15px;text-decoration:none;transition:background-color .2s,border-color .2s}.ds-call:hover{background:rgba(246,240,227,.08);border-color:#f6f0e3}.ds-call:focus-visible{outline:2px solid #ffd27a;outline-offset:3px}"
+    },
+    {
+      "name": "Service Tile",
+      "kind": "custom",
+      "refersTo": "service-tile",
+      "description": "Radio card; its icon's .lit dots turn gold when chosen.",
+      "html": "<label class=\"ds-svc\"><input type=\"radio\" name=\"ds-s\" checked><span class=\"ds-svc-box\"><svg viewBox=\"0 0 28 28\" aria-hidden=\"true\"><path d=\"M3.5 13 14 4.5 24.5 13\"/><path d=\"M6.5 11v12.5h15V11\"/><path d=\"M12 23.5v-5h4v5\"/><circle class=\"lit\" cx=\"8.5\" cy=\"13.5\" r=\"1.4\"/><circle class=\"lit\" cx=\"14\" cy=\"9\" r=\"1.4\"/><circle class=\"lit\" cx=\"19.5\" cy=\"13.5\" r=\"1.4\"/></svg><span class=\"ds-t\">Holiday lights</span><span class=\"ds-s\">Residential install</span></span></label><label class=\"ds-svc\"><input type=\"radio\" name=\"ds-s\"><span class=\"ds-svc-box\"><svg viewBox=\"0 0 28 28\" aria-hidden=\"true\"><path d=\"M14 24V13\"/><path d=\"M9.5 13h9l-1.6-4.5h-5.8z\"/><path d=\"M3.5 24h21\"/><circle class=\"lit\" cx=\"14\" cy=\"15.5\" r=\"1.4\"/></svg><span class=\"ds-t\">Landscape lighting</span><span class=\"ds-s\">Year-round exterior</span></span></label>",
+      "css": ":host{--night:#0d1a35;--card:#122248;--well:#0a1530;--edge:#2e4273;--cream:#f6f0e3;--mist:#b7c3de;--red:#e0262b;--red-hot:#f23a3f;--warm:#ffd27a;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#f6f0e3}:host{display:grid;grid-template-columns:1fr 1fr;gap:10px}.ds-svc{display:block;cursor:pointer}.ds-svc input{position:absolute;opacity:0;width:1px;height:1px}.ds-svc-box{display:grid;grid-template-columns:28px 1fr;gap:4px 10px;align-items:center;min-height:78px;padding:12px;border-radius:14px;background:#0a1530;border:1.5px solid #2e4273;transition:border-color .18s,background-color .18s,box-shadow .25s}.ds-svc-box svg{grid-row:span 2;width:28px;height:28px;stroke:#b7c3de;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.ds-svc-box svg .lit{fill:#b7c3de;stroke:none}.ds-t{font-weight:650;font-size:15px;line-height:1.2}.ds-s{font-size:12.5px;color:#b7c3de}.ds-svc:hover .ds-svc-box{border-color:#4a609a}.ds-svc input:checked+.ds-svc-box{background:#1c2f5e;border-color:#ffd27a;box-shadow:0 8px 18px -10px rgba(2,7,20,.7)}.ds-svc input:checked+.ds-svc-box svg{stroke:#ffd27a}.ds-svc input:checked+.ds-svc-box svg .lit{fill:#ffd27a}.ds-svc input:focus-visible+.ds-svc-box{outline:2px solid #ffd27a;outline-offset:2px}"
+    },
+    {
+      "name": "Add-on Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Optional multi-select add-ons.",
+      "html": "<label class=\"ds-chip\"><input type=\"checkbox\" checked><span>Tree wrapping</span></label><label class=\"ds-chip\"><input type=\"checkbox\"><span>Pathway</span></label>",
+      "css": ":host{--night:#0d1a35;--card:#122248;--well:#0a1530;--edge:#2e4273;--cream:#f6f0e3;--mist:#b7c3de;--red:#e0262b;--red-hot:#f23a3f;--warm:#ffd27a;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#f6f0e3}:host{display:flex;gap:8px}.ds-chip{cursor:pointer}.ds-chip input{position:absolute;opacity:0;width:1px;height:1px}.ds-chip span{display:inline-flex;align-items:center;height:40px;padding:0 14px;border-radius:999px;background:#0a1530;border:1.5px solid #2e4273;font-size:14px;color:#b7c3de;transition:border-color .18s,color .18s,background-color .18s}.ds-chip:hover span{border-color:#4a609a}.ds-chip input:checked+span{color:#f6f0e3;border-color:#ffd27a;background:#1c2f5e}.ds-chip input:focus-visible+span{outline:2px solid #ffd27a;outline-offset:2px}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Dark well input with gold focus.",
+      "html": "<label class=\"ds-label\" for=\"ds-n\">Name</label><input class=\"ds-input\" id=\"ds-n\" placeholder=\"First and last\">",
+      "css": ":host{--night:#0d1a35;--card:#122248;--well:#0a1530;--edge:#2e4273;--cream:#f6f0e3;--mist:#b7c3de;--red:#e0262b;--red-hot:#f23a3f;--warm:#ffd27a;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#f6f0e3}.ds-label{display:block;margin:0 0 8px;font-weight:650;font-size:14.5px}.ds-input{display:block;width:100%;box-sizing:border-box;height:50px;padding:0 14px;border-radius:12px;border:1.5px solid #2e4273;background:#0a1530;color:#f6f0e3;font:16px -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;transition:border-color .18s}.ds-input::placeholder{color:#8f9fc4}.ds-input:hover{border-color:#4a609a}.ds-input:focus{outline:none;border-color:#ffd27a}.ds-input:focus-visible{outline:2px solid #ffd27a;outline-offset:2px}"
+    },
+    {
+      "name": "Booking Card Header",
+      "kind": "card",
+      "refersTo": "booking-card",
+      "description": "Card surface, Anton title, mist sub and urgency line (the light string is canvas, not shown).",
+      "html": "<div class=\"ds-card\"><h2>Book your free consultation</h2><p class=\"ds-sub\">Tell us what you'd like lit.</p><p class=\"ds-urgent\"><i class=\"ds-dot\"></i>Holiday slots fill fast</p></div>",
+      "css": ":host{--night:#0d1a35;--card:#122248;--well:#0a1530;--edge:#2e4273;--cream:#f6f0e3;--mist:#b7c3de;--red:#e0262b;--red-hot:#f23a3f;--warm:#ffd27a;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#f6f0e3}.ds-card{background:#122248;border-radius:22px;padding:28px 28px 26px;box-shadow:0 34px 70px -24px rgba(2,7,20,.8),0 8px 22px -10px rgba(2,7,20,.5)}.ds-card h2{margin:0;font:400 32px/1.02 Anton,'Arial Narrow',sans-serif;text-transform:uppercase;letter-spacing:.01em}.ds-sub{margin:8px 0 0;color:#b7c3de;font-size:15px}.ds-urgent{display:flex;align-items:center;gap:10px;margin:14px 0 0;color:#ffd27a;font-size:14.5px;font-weight:600}.ds-dot{width:10px;height:12px;border-radius:50% 50% 50% 50%/40% 40% 60% 60%;background:radial-gradient(circle at 40% 35%,#ffb3a8,#ff2d2d 55%,#a30d16);box-shadow:0 2px 8px rgba(255,45,45,.55);animation:ds-blink 2.4s ease-in-out infinite}@keyframes ds-blink{50%{opacity:.35}}@media (prefers-reduced-motion:reduce){.ds-dot{animation:none}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Flipping On the Lights",
+    "overview": "A Jersey Shore winter night: navy sky with light snow, a house whose roofline is strung with C9 bulbs in the logo's red, warm white and blue. The booking card has its own string that lights bulb by bulb as answers become valid. Anton caps carry the voice; a system sans does the work. Three materials: tonal navy ground, glass light (canvas bulbs with additive halos), and warm-white gold as the single UI accent. The same file runs as a full demo page or, with ?embed=1, as the card alone for an iframe.",
+    "keyCharacteristics": [
+      "Navy tonal layering; no black, no white surfaces",
+      "Warm Gold is the only state accent",
+      "Signal Red only on the one primary button",
+      "Motion is verlet physics on one shared loop, not keyframes",
+      "House color is the section divider"
+    ],
+    "rules": [
+      {
+        "name": "The One Warm Light Rule",
+        "body": "Every focus, checked, selected and highlight state uses Bulb Warm Gold; no second state accent.",
+        "section": "colors"
+      },
+      {
+        "name": "The Red Is the Button Rule",
+        "body": "Signal Red fills the one primary action per view and nothing else; errors use the salmon pair.",
+        "section": "colors"
+      },
+      {
+        "name": "The Never-Black Rule",
+        "body": "Darkest value is the well navy; shadows are navy-black rgba(2,7,20,...).",
+        "section": "colors"
+      },
+      {
+        "name": "The Anton Is Always Caps Rule",
+        "body": "Anton only at 400, uppercase, headings only.",
+        "section": "typography"
+      },
+      {
+        "name": "The Only Glow Is a Bulb Rule",
+        "body": "Colored glow and bloom belong to bulbs; UI controls signal state with a gold border.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do take colors from :root custom properties; add a variable before a literal.",
+      "Do use Warm Gold for every focus/selected/highlight state; 2px focus rings with offset.",
+      "Do keep Anton uppercase 400 for headings and the system sans for everything read or tapped.",
+      "Do build new decoration from the bulb vocabulary (C9 sprites, .dot bulbs, .lit icon dots), cycling red, white, blue.",
+      "Do tune motion through TUNE and keep every canvas on the shared loop.",
+      "Do prefix widget CSS gpw- and check it in ?embed=1 on a transparent ground."
+    ],
+    "donts": [
+      "Don't use pure black or white surfaces.",
+      "Don't use Signal Red for anything but the primary button.",
+      "Don't put glows, gradients or colored shadows on UI controls.",
+      "Don't start a second animation loop or keyframe the strings; motion must stop under prefers-reduced-motion.",
+      "Don't draw divider lines between hero/house/footer; the roof and footer wire are the dividers."
+    ]
+  }
+}
