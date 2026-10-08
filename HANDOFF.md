@@ -50,6 +50,13 @@
 - The photo's data loads after the scripts, so the card and contact buttons work first. Copy buttons report when the clipboard is blocked (Facebook's in-app browser) and point to press-and-hold instead.
 - Repo visibility: **public** since 2026-10-08 (Ellie's call), with GitHub Pages serving main / root. `brief.md` and Muse's `TRIGGER.md` were committed in the first two commits. Both are now untracked and gitignored but still in history. Raw `src-assets/` was never committed.
 
+## Festive pass (2026-10-08, Ellie: "more festivity around the rest of the page")
+- **Wreath** hangs from the left gable of the hero roof on a red ribbon. It has mini bulbs, a bow and berries, and it swings in the wind and when the pointer or a finger shoves it.
+- **Santa's sleigh** with four reindeer (Rudolph's nose glows) crosses the hero sky every ~25s and leaves gold sparkle dust. Go near him and he hops and bursts sparkles. On desktop he climbs out over the top right; on phones he crosses the gap above the roof. He is off under reduced motion.
+- **Snowy yard** at the bottom of the footer: lit trees (7 on desktop, 4 on phones) with spiral strands and stars, and wrapped presents in the logo colors. Trees sway away from the pointer and their bulbs brighten; tapping a tree runs a light chase up to its star. Presents hop when nudged or tapped. Snow falls. Submitting the form chases every tree as part of the cheer.
+- **Holly** sprig on the card's top-right corner (it rustles, and jiggles each time a new pair of bulbs lights) and after the "how" heading. On the card it is a holiday touch: `&urgency=off` hides it along with the urgency line.
+- All of it runs in the same animation loop and pauses off screen. No images were added (everything is drawn in code), so the file grew by about 25KB.
+
 ## Review round (finish reviewer, 2026-10-08)
 - Applied:
   - roofline in the first viewport
