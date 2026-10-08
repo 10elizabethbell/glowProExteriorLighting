@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "dark-glow",
+        "value": "0 2px 8px rgba(255, 45, 45, .55)",
+        "createdAt": "2026-10-08T11:37:46.989Z",
+        "reason": "agent decided: .dot elements are lit C9 bulb markers; glow is literal light in the client's trade"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "0 2px 8px rgba(255, 230, 170, .55)",
+        "createdAt": "2026-10-08T11:37:47.114Z",
+        "reason": "agent decided: .dot elements are lit C9 bulb markers; glow is literal light in the client's trade"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "0 2px 8px rgba(42, 166, 255, .55)",
+        "createdAt": "2026-10-08T11:37:47.218Z",
+        "reason": "agent decided: .dot elements are lit C9 bulb markers; glow is literal light in the client's trade"
+      }
+    ]
+  }
+}

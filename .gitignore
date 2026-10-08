@@ -1,0 +1,6 @@
+src-assets/
+.claude/
+.claude-claimed
+.shoot-*
+shots/
+.DS_Store

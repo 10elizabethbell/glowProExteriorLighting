@@ -1,0 +1,1 @@
+Use the pitch-site skill. Build the pitch site for Glow Pro Exterior Lighting LLC from ./brief.md, unattended, to the 60% line. Don't ask me questions; record assumptions and gaps in HANDOFF.md. Push to a private repo when done and report the repo link and the top open questions.
