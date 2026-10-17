@@ -11,7 +11,7 @@
   - the top of the card.
   - the how→footer seam, where the house color follows the swaying wire.
 - **The authored moment:** the card's 10 bulbs light two at a time as each of the 5 required answers becomes valid. On submit, a chase runs along both strings.
-- **Booking:** service picker (4), optional add-ons (4), name, phone, address, preferred week (date input, reported as "week of Mon, Nov 9"). Inline plain-language errors. Submit opens `sms:+16092228146?&body=…`; a done state shows the message with "Open messages again", "Copy message" and "Edit my details". A "Prefer to talk?" button calls `tel:+16092228146`, with a plain email link (Info@glowpronj.com) under it. The done state also offers a pre-filled email of the same message. In embed mode the links target `_top` so they leave the iframe.
+- **Booking:** service picker (4), optional add-ons (4), name, phone, address, preferred week (date input, reported as "week of Mon, Nov 9"). Inline plain-language errors. Submit opens `sms:+16092228146?&body=…`; a done state shows the message with "Open messages again", "Copy message" and "Edit my details". A "Prefer to talk?" button calls `tel:+16092228146`. The company email appears only in the footer. In embed mode the links target `_top` so they leave the iframe.
 - **Embed:** instructions are commented at the top of the file, and the snippet is shown on the demo page with a Copy button. The iframe reports its height to the parent with postMessage, so it fits without an inner scrollbar.
 - One shared rAF loop. Rendering pauses when the strings are off screen; reduced motion gets one still frame. No tracking, no external requests.
 
@@ -33,7 +33,7 @@
 
 ## Questions for the owner
 - **Does (609) 222-8146 take texts?** The brief says unknown. If it's a landline, every SMS request is lost: change `SMS_TO` in the widget script. Call and email fallbacks are on the card either way.
-- Would they rather get requests by email (Info@glowpronj.com) as well, or instead? A mailto fallback is easy to add.
+- Do they have a Facebook page? If so, it goes under the work photo and in the footer.
 - Which services matter most this season (picker order)? Should add-ons stay, or is a shorter form better?
 - Is there a service-area cutoff? An address outside Ocean or Monmouth County currently goes through without a check.
 - Who manages their WordPress and hosting (to place the file)?
@@ -56,6 +56,17 @@
 - **Snowy yard** at the bottom of the footer: lit trees (7 on desktop, 4 on phones) with spiral strands and stars, and wrapped presents in the logo colors. Trees sway away from the pointer and their bulbs brighten; tapping a tree runs a light chase up to its star. Presents hop when nudged or tapped. Snow falls. Submitting the form chases every tree as part of the cheer.
 - **Holly** sprig on the card's top-right corner (it rustles, and jiggles each time a new pair of bulbs lights) and after the "how" heading. On the card it is a holiday touch: `&urgency=off` hides it along with the urgency line.
 - All of it runs in the same animation loop and pauses off screen. No images were added (everything is drawn in code), so the file grew by about 25KB.
+
+## Finishing-rules pass (2026-10-17, relayed from the freelance coordinator session)
+- Removed: the "Demo one-pager — free sample." footer line, the "Booking widget demo" header note, the photo caption, the hero's services/area line and facts row, the card's email link and the done state's "email it" option, and the **sticky Book/Call dock on phones** (the phone-first pass above is superseded on that point).
+- Hero lead is now their own line: "We handle the ladders, the lights, and the details so you can sit back, relax, and enjoy your home." The card lead speaks to what we take off the customer's hands instead of describing the process.
+- Hover and focus outlines in one accent (warm gold #ffd27a; the button fill is red) on service boxes, add-on chips, inputs, buttons, the header number, the snippet button and links.
+- Favicon (inline SVG) and `apple-touch-icon.png` drawn from the logo's mark: the roofline with red, white and blue bulbs. `og.png` (1200x630) plus og/twitter tags pointing at the live URL.
+- **Not applied, and why:**
+  - **Facebook link:** the brief found no standalone Facebook page (only a group post), so there's nothing to link. Ask the owner for one.
+  - **Call button on the card:** the brief requires a "Prefer to talk?" tap-to-call button. On tall desktop screens it can be in view at the same time as the header number. It stays because the brief asks for it, and the card also works on its own when embedded.
+  - **"How it works" and the embed section:** this is a widget build, so the section that tells the owner how to paste it in stays.
+  - **Impeccable in every mode:** skipped for this pass, as the coordinator instructed.
 
 ## Review round (finish reviewer, 2026-10-08)
 - Applied:
