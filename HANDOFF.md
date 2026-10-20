@@ -19,7 +19,12 @@ Ellie made the calm band style (from lpmr.co.uk, `calm-photo-style.md`) the hous
   - **H1:** "Your home, lit up in Ocean & Monmouth." It bounces in letter by letter.
   - **Promise:** their own line, "We handle the ladders, the lights, and the details…".
   - **Buttons:** Book a free consultation (gold, scrolls to the card) and Text us (outlined, `sms:`).
-  - **Photo:** their work-01 night photo, cropped to 1024x520, in a 24px card. It sits under the copy on phones and beside it on desktop.
+  - **Photo (Ellie's 2026-10-19 rule: use a real photo as the hero ground when it renders well):** their work-01 night photo, at full size (1024x763), sits under a navy shade.
+    - On phones it's pinned to the foot of the hero at its own scale, so it stays sharp, with the lit roofline just under the buttons.
+    - From 760px to 1279px the layout is the same, with a taller photo.
+    - From 1280px the whole house sits to the right of the copy and fades into the navy. The photo's black sky is tinted 20% toward navy.
+    - The shade is solid navy behind all hero text. Pixel sampling with the text hidden gives white text 4.9:1 or better at 360, 390, 430, 844 landscape, 800, 1024, 1440 and 1920.
+    - The photo is never stretched (object-fit: cover only). The texture is off the hero, so nothing lies over the photo.
 - **Booking card** (still the deliverable; still the only thing `?embed=1` shows):
   - **Fields:** an eyebrow "Free, no obligation estimate", 4 service tiles, 4 optional add-on chips, name, phone, the address of the property, and a preferred week.
   - **Errors and submit:** inline errors in plain sentences, then "Text my request".
@@ -32,12 +37,17 @@ Ellie made the calm band style (from lpmr.co.uk, `calm-photo-style.md`) the hous
 - **Motion:** the H1 bounce-in and one 12px fade-up (`.rise`), nothing else. Under reduced motion or with JS off, everything shows at once (checked in Chromium and WebKit).
 - **Phones held sideways** (≤500px tall) get a compact header and a two-column hero, so both buttons fit on the first screen.
 - **New `og.png`:** 1200x630, taken from the new hero. The favicon and apple-touch-icon are unchanged: both are the logo's roofline-and-bulbs mark.
-- **Docs:** `PRODUCT.md` updated; `DESIGN.md` rewritten from the built page.
+- **Form fixes from the DPG reference** (calm-photo-style.md, "Fix what the DPG reference got wrong"), each checked by hand:
+  - fields, tiles and chips now use their own `--field` fill (#e6ecf5) on the white card
+  - the red error border survives focus and hover
+  - a selected tile or chip shows a 3px blue outline with an offset on keyboard focus
+  - The phone-number `word-spacing:-.15em` fix was tried and dropped. In this build Cal Sans already sets "(609) 222-8146" with a normal gap; at -.15em (and -.06em) it rendered as "(609)222-8146".
+- **Docs:** `PRODUCT.md` updated; `DESIGN.md` and `.impeccable/design.json` rewritten from the built page.
 
 ## Assumptions I made
 - **Gold accent, not their red.** The calm style wants one warm accent used as a fill with navy text on it. Navy on their red #CC0000 is about 3.6:1, which fails, so I used the warm-white glow of their C9 bulbs. Their red, white and blue stay in the logo and favicon.
 - **Navy, not their black,** because of the house rule against black grounds.
-- **Hero photo:** the calm style asks for "the best wide photo under a navy overlay". work-01 is only 1024px wide, so a full-bleed hero would blur on desktop. It sits in a card next to the copy instead, so no white text sits on the photo and no pixel sampling is needed.
+- **Hero photo:** work-01 is only 1024px wide. Blowing it up full-bleed behind the text softened it and cropped it to the doorway (I checked at 390 and 1440 and rejected that version). So it fills only the part of the hero beside or below the text, at about its own scale (0.9–1x).
 - **Audience not treated as 40+.** The brief doesn't flag it. Ocean County does have many retirement communities (Manchester, Berkeley). If Ellie sees them as 40+, the fix is two lines: remove the bounce-in and fade-up blocks, and raise body text to 18px.
 - **Copy I wrote:**
   - "Your home, lit up in Ocean & Monmouth."

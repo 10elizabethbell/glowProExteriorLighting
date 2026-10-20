@@ -217,11 +217,12 @@ A cool night-sky palette (paper, two navies, slate text) warmed by a single bulb
 
 One centred column (max 1160px) with a 20px gutter on phones and 40px from 760px. Sections are full-bleed bands with 64px vertical padding on phones and 96px from 760px.
 
-Band order on the full page: paper header (logo left, tap-to-call number right, 72px tall, 84px desktop), textured night-navy hero, paper booking band, textured deep "how it works" band, plain night-navy close, textured deep footer. The footer leaves 96px plus the safe-area inset at the bottom so the floating circle never covers its content.
+Band order on the full page: paper header (logo left, tap-to-call number right, 72px tall, 84px desktop), night-navy hero over their night photo (no texture: nothing is laid over the photo), paper booking band, textured deep "how it works" band, plain night-navy close, textured deep footer. The footer leaves 96px plus the safe-area inset at the bottom so the floating circle never covers its content.
 
-- **Phones (default):** everything stacks. Hero copy, then two full-width stacked buttons, then the photo card. The booking card comes before the claims list.
+- **Phones (default):** everything stacks. Hero copy, then two full-width stacked buttons, with the night photo pinned to the hero's foot at its own scale (340px tall, `--photo-h`) under a shade that is solid navy behind the text and clears over the house. 760–1279px uses the same layout with a taller photo (`min(72vw,560px)`). The booking card comes before the claims list.
 - **760px and up:** hero buttons sit side by side (min 240px each).
-- **1024px and up:** hero splits copy and photo 1 : 1.25; the booking band splits claims (sticky, 40px from top) and card 1 : 1.15 with claims on the left; name and phone pair up; steps go three across; the snippet panel splits 5 : 7; the close puts the big phone number bottom-right.
+- **1280px and up:** the photo moves to the right of the copy (`--photo-x` = copy column edge), fading from solid navy over 180px and tinted 20% navy so its black sky reads as night navy. White hero text samples at 4.9:1 or better at every width.
+- **1024px and up:** the booking band splits claims (sticky, 40px from top) and card 1 : 1.15 with claims on the left; name and phone pair up; steps go three across; the snippet panel splits 5 : 7; the close puts the big phone number bottom-right.
 - **Phones held sideways (landscape, height 500px or less):** the header shrinks to 52px with an 88px logo, the hero goes two-column with a smaller H1 (clamp 28px to 40px on viewport height) and 48px buttons side by side, so the offer and both buttons fit the first screen.
 - **Narrow phones (380px or less):** tile and chip padding tighten.
 
@@ -229,7 +230,7 @@ Band order on the full page: paper header (logo left, tap-to-call number right, 
 
 ## Elevation & Depth
 
-Depth is tonal first: paper against white, navy against deep, and the diagonal line texture (a 1px white line at 3.5% every 23px, at 135 degrees) on the hero, deep band and footer. Only two things lift, both with soft, navy-tinted ambient shadows. There are no hard offset shadows and no shadows on buttons, tiles or fields.
+Depth is tonal first: paper against white, navy against deep, and the diagonal line texture (a 1px white line at 3.5% every 23px, at 135 degrees) on the deep band and footer. Only two things lift, both with soft, navy-tinted ambient shadows. There are no hard offset shadows and no shadows on buttons, tiles or fields.
 
 ### Shadow Vocabulary
 - **Card lift** (`box-shadow: 0 18px 50px rgba(13,27,61,.08)`): the booking card on paper.
@@ -241,7 +242,7 @@ Depth is tonal first: paper against white, navy against deep, and the diagonal l
 
 ## Shapes
 
-A family of soft rounds, scaled by size: 24px for containers (booking card, hero photo, snippet panel), 16px for elements inside a container (service tiles, the message preview, the code block), 10px for text fields, full pills for buttons, chips and label pills, and circles for the numbered step markers and the floating text circle. Focus outlines take a 6px round. Borders are rare: inputs, tiles and chips carry a 2px transparent border that only colours on hover, focus, error or selection, so states never shift layout.
+A family of soft rounds, scaled by size: 24px for containers (booking card, snippet panel), 16px for elements inside a container (service tiles, the message preview, the code block), 10px for text fields, full pills for buttons, chips and label pills, and circles for the numbered step markers and the floating text circle. Focus outlines take a 6px round. Borders are rare: inputs, tiles and chips carry a 2px transparent border that only colours on hover, focus, error or selection, so states never shift layout.
 
 **The Nested Round Rule.** An element inside a 24px container uses 16px or less; nothing inside the card is rounder than the card except pills.
 

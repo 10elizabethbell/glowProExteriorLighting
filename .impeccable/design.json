@@ -269,7 +269,7 @@
       {
         "name": "night-lines",
         "value": "repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.035) 22px 23px)",
-        "purpose": "Faint diagonal lines on the hero, deep band and footer; navy grounds only."
+        "purpose": "Faint diagonal lines on the deep band and footer; navy grounds only (the hero carries their photo instead)."
       }
     ],
     "shadows": [
