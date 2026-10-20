@@ -18,19 +18,18 @@ Their own site's words: "From holiday displays to permanent architectural lighti
 
 ## Capabilities and constraints
 - Services (their wording, shortened for the picker): residential holiday/Christmas light installation; year-round exterior and landscape lighting; permanent LED / smart color-changing systems; commercial exterior and holiday lighting. Add-ons: tree wrapping, pathway, security/motion, smart timers.
-- Whether (609) 222-8146 accepts texts is unknown (brief, 2026-10-08), so every SMS path has a call and email (Info@glowpronj.com) fallback.
-- Output is an `sms:` link (plus a pre-filled mailto fallback). No server, no storage, no analytics.
+- Whether (609) 222-8146 accepts texts is unknown (brief, 2026-10-08), so every SMS path has a tap-to-call fallback on the card. The email (Info@glowpronj.com) appears only in the page footer (house rule).
+- Output is an `sms:` link, with "Open messages again" and "Copy message" fallbacks. No server, no storage, no analytics.
 - Must embed in WordPress (iframe or Custom HTML block) without leaking styles into their theme.
-- Urgency line ("Holiday slots fill fast — book early") is a toggle, never a fake deadline.
 
 ## Brand commitments
-- Logo: white roofline-of-bulbs mark with red, white and blue bulbs, "Glow Pro / Exterior Lighting LLC" (from glowpronj.com).
-- Site colors observed: red #CC0000, white, near-black grounds; display font Anton. (Page ground here: deep night navy, not black — house rule.)
+- Logo: roofline-of-bulbs mark (black and white versions) with red, white and blue bulbs, "Glow Pro / Exterior Lighting LLC" (from glowpronj.com).
+- Site colors observed: red #CC0000, white, near-black grounds; display font Anton. Since the 2026-10-19 revamp the page uses Ellie's calm band style: paper and night-navy bands, warm-white bulb gold as the one accent (inferred from their warm-white lights, not from the logo), Cal Sans headings. Logo shown as their own black-line transparent PNG on the paper header.
 - Licensed and insured (per their site; not repeated as a new claim beyond that).
 
 ## Evidence on hand
 - Phone (609) 222-8146, email Info@glowpronj.com, service area towns, services list, 3-step process copy: from brief and glowpronj.com.
-- Photos: work-01 from glowpronj.com (night roofline install, clean) is used; work-02 (vehicle in frame) and work-03 (two people in frame) are not.
+- Photos: work-01 from glowpronj.com (night roofline install, clean) is the hero photo; work-02 (vehicle in frame) and work-03 (two people in frame) are not.
 - Three testimonials exist on their own site (Sarah M., Mike D., Lauren P.); not used on the page yet.
 - No prices used. Their site's early-booking discount ended September 30 (inferred stale as of 2026-10-08); not used.
 
@@ -38,4 +37,4 @@ Their own site's words: "From holiday displays to permanent architectural lighti
 1. Their business, done better, inside one screen.
 2. Every fact traceable to the brief or their site.
 3. Short form, big targets, works with one thumb.
-4. Light is the material: the motion is their bulbs.
+4. Calm and orderly around their own photo: one bounce-in on the headline, one quiet fade-up, nothing else moves.
