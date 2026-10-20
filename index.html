@@ -163,6 +163,7 @@ input[type=date]{display:block}
 input::placeholder{color:var(--soft)}
 input[type=text]:focus,input[type=tel]:focus,input[type=date]:focus{outline:none;border-color:var(--focus)}
 .hint{font-size:15px;color:var(--soft)}
+.phone-row{display:grid;gap:22px}
 /* service picker: four tinted tiles */
 .svcs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .svcs input,.chips input{position:absolute;width:1px;height:1px;opacity:0;margin:0}
@@ -201,6 +202,7 @@ input[type=text]:focus,input[type=tel]:focus,input[type=date]:focus{outline:none
 .steps li{display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start;counter-increment:s}
 .steps li::before{content:counter(s);width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--ink);font:400 20px/1 var(--display)}
 .steps b{display:block;font:400 21px/1.2 var(--display);color:var(--on-dark);margin-top:4px}
+.steps b{text-wrap:balance}
 .steps span{display:block;margin-top:4px}
 .embed{margin-top:48px;display:grid;gap:20px;background:rgba(255,255,255,.05);border-radius:var(--r-card);padding:clamp(20px,5vw,32px)}
 .embed h3{font-size:clamp(24px,6vw,30px)}
@@ -262,6 +264,8 @@ footer a{display:inline-flex;align-items:center;min-height:44px;color:var(--on-d
   .close .wrap{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:end}
   .bigtel{margin-top:0}
 }
+/* phones held sideways: keep the offer and both buttons in the first screen */
+@media (orientation:landscape) and (max-height:500px){.top .wrap{min-height:52px;padding-top:4px;padding-bottom:4px}.brand img{width:88px}.tel{font-size:18px}.hero .wrap{grid-template-columns:1fr 1fr;gap:28px;align-items:center;padding-top:18px;padding-bottom:28px}.hero-copy{gap:10px}.hero h1{font-size:clamp(28px,9vh,40px);max-width:none}.promise{font-size:15px;line-height:1.4}.actions{margin-top:2px}.actions .btn{min-height:48px}.actions{grid-auto-flow:column;justify-content:start}.actions .btn{min-width:0;padding:0 20px}}
 /* hover styles only where there is a real pointer, so taps don't leave them stuck on */
 @media (hover:hover){
 .tel:hover{color:var(--gold-ink)}
@@ -327,12 +331,12 @@ FORM: Single file; ?embed=1 shows only the booking card. Calm band style; the ea
       <div class="gpw-head">
         <p class="eyebrow">Free, no obligation estimate</p>
         <h2 id="gpw-h">Book your free consultation</h2>
-        <p class="gpw-sub">Tell us what you'd like lit. We design it, hang it, look after it and take it down.</p>
+        <p class="gpw-sub">Tell us what you'd like lit. We'll design it around your home and look after it like it's our own.</p>
       </div>
       <form id="gpw-form" novalidate aria-labelledby="gpw-h">
         <fieldset class="field" id="f-service">
-          <legend>What would you like lit?</legend>
-          <div class="svcs" aria-describedby="e-service">
+          <legend id="lg-service">What would you like lit?</legend>
+          <div class="svcs" role="radiogroup" aria-labelledby="lg-service" aria-describedby="e-service">
             <input type="radio" name="service" id="s1" value="Residential holiday / Christmas light installation"><label for="s1"><b>Holiday lights</b><span>Residential install</span></label>
             <input type="radio" name="service" id="s2" value="Year-round exterior & landscape lighting"><label for="s2"><b>Landscape lighting</b><span>Year-round exterior</span></label>
             <input type="radio" name="service" id="s3" value="Permanent LED / smart color-changing system"><label for="s3"><b>Permanent LED</b><span>Smart color-changing</span></label>
@@ -370,15 +374,15 @@ FORM: Single file; ?embed=1 shows only the booking card. Calm band style; the ea
           <label class="lbl" for="gpw-week">Preferred week</label>
           <div class="date" id="gpw-date"><input type="date" id="gpw-week" name="week" aria-describedby="h-week e-week"><span class="date-ph" aria-hidden="true">Tap to pick a day</span></div>
           <p class="hint" id="h-week">Pick any day in the week that suits you.</p>
-          <p class="err" id="e-week">Pick a day from today on.</p>
+          <p class="err" id="e-week">Pick a day from today onward.</p>
         </div>
         <button class="btn btn-primary" type="submit"><svg aria-hidden="true"><use href="#i-chat"/></svg>Text my request</button>
-        <p class="after">Opens your messages with this written out. Nothing sends until you tap send.</p>
+        <p class="after">Opens your messages with your request written out. Nothing sends until you tap send.</p>
         <p class="talk">Prefer to talk? <a href="tel:+16092228146" data-top>Call (609) 222-8146</a></p>
       </form>
       <div class="done" id="gpw-done" tabindex="-1" aria-live="polite">
         <h3 style="font-size:28px">Your text is ready</h3>
-        <p>Your messages should be open with this filled in. Tap send and it goes straight to Glow Pro.</p>
+        <p>Your messages should be open with this filled in. Tap send and it comes straight to us, and we'll be in touch to set up your free consultation.</p>
         <div class="msg" id="gpw-msg"></div>
         <a class="btn btn-primary" id="gpw-sms" href="sms:+16092228146" data-top><svg aria-hidden="true"><use href="#i-chat"/></svg>Open messages again</a>
         <button class="btn btn-line" type="button" id="gpw-copy"><svg aria-hidden="true"><use href="#i-copy"/></svg><span>Copy message</span></button>
@@ -556,7 +560,7 @@ var EMBED = document.documentElement.classList.contains('is-embed');
   window.GlowCopy=copy;
   // tell the parent page how tall the card is, so the iframe fits with no inner scroll
   if(EMBED&&window.parent!==window&&'ResizeObserver' in window){
-    new ResizeObserver(function(){parent.postMessage({type:'gpw-height',h:Math.ceil(document.documentElement.scrollHeight)},'*')}).observe(document.body);
+    new ResizeObserver(function(){parent.postMessage({type:'gpw-height',h:Math.ceil(document.body.getBoundingClientRect().height)},'*')}).observe(document.body);
   }
   window.__gpw={message:message,smsHref:smsHref,values:values,problems:problems};
 })();
