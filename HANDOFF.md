@@ -91,6 +91,11 @@ Ellie made the calm band style (from lpmr.co.uk, `calm-photo-style.md`) the hous
 - Time-window chips (morning, afternoon, evening) next to the week.
 - A white card already suits their dark site, but a version tinted to their section colour could be offered.
 
+- **Impeccable detector, final run:**
+  - `cramped-padding` on the booking card is a false positive: the card has 20–32px padding on every side, as the screenshots show.
+  - `repeating-stripes-gradient` is the calm-style texture.
+  - The remaining `design-system-*` advisories are one-off sizes: the 13px code block, the 28px done heading and the 16px tiles.
+
 ## Not verified
 - Real-device touch, and the SMS handoff opening Messages with the body intact, especially iOS Safari inside an iframe.
 - The iframe height postMessage on a real WordPress/Elementor page.
