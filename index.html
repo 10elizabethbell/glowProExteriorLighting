@@ -190,7 +190,7 @@ input[type=text]:focus,input[type=tel]:focus,input[type=date]:focus{outline:none
 .talk a{display:inline-block;padding:11px 2px;margin:-11px 0;color:var(--ink);font-weight:600;white-space:nowrap;text-decoration-color:rgba(13,27,61,.35);text-underline-offset:3px}
 .done{display:grid;gap:16px}
 .done:focus{outline:none}
-.gpw.is-done form{display:none}
+.gpw.is-done form,.gpw.is-done .gpw-sub{display:none}
 .gpw:not(.is-done) .done{display:none}
 .msg{white-space:pre-wrap;background:var(--paper);border-radius:16px;padding:16px 18px;font-size:16px;line-height:1.55;color:var(--ink)}
 .linkbtn{justify-self:center;min-height:44px;background:none;border:0;padding:0 8px;font:600 16px/1 var(--text);color:var(--ink);text-decoration:underline;text-decoration-color:rgba(13,27,61,.35);text-underline-offset:3px;cursor:pointer}
@@ -382,7 +382,7 @@ FORM: Single file; ?embed=1 shows only the booking card. Calm band style; the ea
         <div class="msg" id="gpw-msg"></div>
         <a class="btn btn-primary" id="gpw-sms" href="sms:+16092228146" data-top><svg aria-hidden="true"><use href="#i-chat"/></svg>Open messages again</a>
         <button class="btn btn-line" type="button" id="gpw-copy"><svg aria-hidden="true"><use href="#i-copy"/></svg><span>Copy message</span></button>
-        <p class="after">On a computer? Copy it and text it to (609) 222-8146 from your phone.</p>
+        <p class="after">On a computer? Copy it and text it to <span class="nw">(609) 222-8146</span> from your phone.</p>
         <button class="linkbtn" type="button" id="gpw-edit">Edit my details</button>
       </div>
     </div>
