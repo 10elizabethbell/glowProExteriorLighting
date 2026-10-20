@@ -1,292 +1,305 @@
 ---
-name: Glow Pro Booking Widget
-description: A Jersey Shore roofline at night, strung with C9 bulbs that light up as the booking form fills.
+name: Glow Pro Exterior Lighting
+description: A calm, banded booking page that lets the customer's own lit-up home do the selling and turns a visit into a pre-written text.
 colors:
-  signal-red: "#e0262b"
-  signal-red-hot: "#f23a3f"
-  bulb-warm: "#ffd27a"
-  bulb-red: "#ff2d2d"
-  bulb-white: "#fff1cc"
-  bulb-blue: "#2aa6ff"
-  night: "#0d1a35"
-  night-sky: "#16295a"
-  house: "#14254a"
-  card: "#122248"
-  well: "#0a1530"
-  well-selected: "#1c2f5e"
-  edge: "#2e4273"
-  edge-hover: "#4a609a"
-  cream: "#f6f0e3"
-  mist: "#b7c3de"
-  placeholder: "#8f9fc4"
-  err-text: "#ffb0a6"
-  err-edge: "#ff7a70"
+  bulb-gold: "#ffc24a"
+  bulb-gold-bright: "#ffd27a"
+  gold-ink: "#8a5a00"
+  logo-blue: "#0b7fd1"
+  night-navy: "#15295a"
+  deep-navy: "#0b1834"
+  paper: "#f4f6fb"
+  card-white: "#ffffff"
+  ink: "#0d1b3d"
+  body-slate: "#2a3650"
+  soft-slate: "#4a5670"
+  on-dark: "#f4f7fb"
+  on-dark-soft: "#c6d1e8"
+  hairline: "rgba(13,27,61,.12)"
+  error-red: "#b3261e"
 typography:
   display:
-    fontFamily: "Anton, 'Arial Narrow', sans-serif"
-    fontSize: "clamp(46px, 6.6vw, 92px)"
-    fontWeight: 400
-    lineHeight: 0.98
-    letterSpacing: "0.005em"
-  headline:
-    fontFamily: "Anton, 'Arial Narrow', sans-serif"
-    fontSize: "clamp(34px, 4.4vw, 58px)"
-    fontWeight: 400
-    lineHeight: 1
-  title:
-    fontFamily: "Anton, 'Arial Narrow', sans-serif"
-    fontSize: "32px"
+    fontFamily: "Cal Sans, Avenir Next, Segoe UI, system-ui, sans-serif"
+    fontSize: "clamp(42px, 12vw, 80px)"
     fontWeight: 400
     lineHeight: 1.02
-    letterSpacing: "0.01em"
-  title-sm:
-    fontFamily: "Anton, 'Arial Narrow', sans-serif"
-    fontSize: "24px"
+    letterSpacing: "-0.005em"
+  headline:
+    fontFamily: "Cal Sans, Avenir Next, Segoe UI, system-ui, sans-serif"
+    fontSize: "clamp(30px, 7.6vw, 48px)"
     fontWeight: 400
-    lineHeight: 1.1
+    lineHeight: 1.08
+    letterSpacing: "-0.005em"
+  title:
+    fontFamily: "Cal Sans, Avenir Next, Segoe UI, system-ui, sans-serif"
+    fontSize: "clamp(20px, 5.4vw, 23px)"
+    fontWeight: 400
+    lineHeight: 1.2
+  label:
+    fontFamily: "Cal Sans, Avenir Next, Segoe UI, system-ui, sans-serif"
+    fontSize: "17px"
+    fontWeight: 400
+    lineHeight: 1.2
+  button:
+    fontFamily: "Cal Sans, Avenir Next, Segoe UI, system-ui, sans-serif"
+    fontSize: "18px"
+    fontWeight: 400
+    lineHeight: 1
+  lede:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif"
+    fontSize: "clamp(17px, 4.6vw, 19px)"
+    fontWeight: 400
+    lineHeight: 1.5
   body:
-    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif"
     fontSize: "16px"
     fontWeight: 400
-    lineHeight: 1.55
-  label:
-    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
-    fontSize: "14.5px"
-    fontWeight: 650
-    lineHeight: 1.3
-  meta:
-    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
-    fontSize: "13px"
+    lineHeight: 1.7
+  small:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif"
+    fontSize: "15px"
     fontWeight: 400
-    lineHeight: 1.45
+    lineHeight: 1.4
 rounded:
-  field: "12px"
-  tile: "14px"
-  panel: "16px"
-  card: "22px"
+  field: "10px"
+  tile: "16px"
+  card: "24px"
   pill: "999px"
 spacing:
-  gap-chip: "8px"
-  gap-tile: "10px"
-  gap-field: "14px"
-  gutter-phone: "16px"
-  gutter-desktop: "32px"
-  card-pad-x: "28px"
-  section-gap: "64px"
+  gutter-phone: "20px"
+  gutter-desktop: "40px"
+  tile-gap: "10px"
+  card-gap: "20px"
+  form-gap: "22px"
+  card-padding: "clamp(20px, 5vw, 32px)"
+  band-phone: "64px"
+  band-desktop: "96px"
 components:
   button-primary:
-    backgroundColor: "{colors.signal-red}"
-    textColor: "#ffffff"
-    typography: "{typography.label}"
-    rounded: "{rounded.tile}"
-    padding: "0 18px"
-    height: "54px"
-    width: "100%"
+    backgroundColor: "{colors.bulb-gold}"
+    textColor: "{colors.ink}"
+    typography: "{typography.button}"
+    rounded: "{rounded.pill}"
+    padding: "0 26px"
+    height: "56px"
   button-primary-hover:
-    backgroundColor: "{colors.signal-red-hot}"
+    backgroundColor: "{colors.bulb-gold-bright}"
+    textColor: "{colors.ink}"
   button-ghost:
     backgroundColor: "transparent"
-    textColor: "{colors.cream}"
-    rounded: "{rounded.tile}"
-    padding: "0 18px"
-    height: "54px"
-    width: "100%"
-  button-call:
+    textColor: "{colors.on-dark}"
+    typography: "{typography.button}"
+    rounded: "{rounded.pill}"
+    padding: "0 26px"
+    height: "56px"
+  button-line:
     backgroundColor: "transparent"
-    textColor: "{colors.cream}"
+    textColor: "{colors.ink}"
+    typography: "{typography.button}"
     rounded: "{rounded.pill}"
-    padding: "0 16px"
-    height: "42px"
+    padding: "0 26px"
+    height: "56px"
   booking-card:
-    backgroundColor: "{colors.card}"
-    textColor: "{colors.cream}"
+    backgroundColor: "{colors.card-white}"
     rounded: "{rounded.card}"
-    padding: "74px 28px 26px"
-  service-tile:
-    backgroundColor: "{colors.well}"
-    textColor: "{colors.cream}"
-    rounded: "{rounded.tile}"
-    padding: "12px"
-  service-tile-selected:
-    backgroundColor: "{colors.well-selected}"
-    textColor: "{colors.cream}"
-  chip:
-    backgroundColor: "{colors.well}"
-    textColor: "{colors.mist}"
-    rounded: "{rounded.pill}"
-    padding: "0 14px"
-    height: "40px"
-  chip-selected:
-    backgroundColor: "{colors.well-selected}"
-    textColor: "{colors.cream}"
-  input:
-    backgroundColor: "{colors.well}"
-    textColor: "{colors.cream}"
+    padding: "{spacing.card-padding}"
+  input-field:
+    backgroundColor: "{colors.paper}"
+    textColor: "{colors.ink}"
     typography: "{typography.body}"
     rounded: "{rounded.field}"
-    padding: "0 14px"
-    height: "50px"
+    padding: "13px 14px"
+    height: "52px"
+  service-tile:
+    backgroundColor: "{colors.paper}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.tile}"
+    padding: "12px 14px"
+    height: "76px"
+  service-tile-selected:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.card-white}"
+  chip:
+    backgroundColor: "{colors.paper}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.pill}"
+    padding: "0 18px"
+    height: "48px"
+  chip-selected:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.card-white}"
+  step-marker:
+    backgroundColor: "{colors.bulb-gold}"
+    textColor: "{colors.ink}"
+    size: "48px"
+  text-float:
+    backgroundColor: "{colors.bulb-gold}"
+    textColor: "{colors.ink}"
+    size: "60px"
 ---
 
-# Design System: Glow Pro Booking Widget
-
-Source of truth: `index.html` (single file; CSS custom properties in `:root`, canvas motion in the `LIGHT STRINGS` script). Motion, shadows, breakpoints and component snippets live in `.impeccable/design.json`.
+# Design System: Glow Pro Exterior Lighting
 
 ## Overview
 
-**Creative North Star: "Flipping On the Lights"**
+**Creative North Star: "The Lit Porch at Dusk"**
 
-The page is a winter night on the Jersey Shore. A navy sky (never black) with light snow sits over a house whose roofline is strung with real-feeling C9 bulbs in the logo's red, warm white and blue. The booking card is part of that scene. It has its own short string of bulbs, and each valid answer lights one more. Anton caps carry the voice, borrowed from glowpronj.com. A plain system sans does the work everywhere else.
+The page is a quiet, orderly street at night: off-white paper bands for reading and filling in, night-sky navy bands for arrival and sign-off, and one warm bulb gold that behaves like the lights themselves, a fill that glows rather than a colour that talks. The customer's own photo of a lit roofline is the only spectacle; everything around it stays calm so the work does the selling.
 
-The world is built from three materials. Night ground is tonal navy layers. Glass light is the canvas bulbs and their additive halos. Warm-white glow is the single UI accent for focus, selection and emphasis. Everything else stays quiet. Inputs are dark wells with a hairline edge, and type is cream or mist. The only saturated fill on the page is one red button.
+Density is generous and phone-first. Bands stack full-bleed, content sits in one 1160px column, and the booking card is the destination of every primary action. Rounded, soft-cornered forms (24px containers, pill actions) keep the tone friendly and domestic rather than corporate. Depth is mostly tonal; only the booking card and the floating text circle lift.
 
-The same file runs in two modes. The full demo page includes a hero roofline, a "how it works" house section and a footer string. Embed mode (`?embed=1`) shows only the card on a transparent ground for an iframe on the client's WordPress site. `&urgency=off` hides the holiday line.
+The world was revamped on 2026-10-19 from a festive light-string look. That earlier world (condensed caps display, canvas light strings, red buttons, seasonal mascots) is retired and lives only in git history; nothing from it carries forward.
 
 **Key Characteristics:**
-- Navy tonal layering, no black, no white surfaces.
-- One accent role (warm bulb gold) for every focus, selection and highlight state.
-- Red only for the commit action, because it is the logo's red.
-- Bulbs are the decoration. The motion is physics (verlet wire, swinging sockets) and nothing is keyframed except the urgency blink and the done-state rise.
-- The house color is the section divider. Where the roof (or the footer's wire) meets the sky, the color changes.
+- Full-bleed bands in three grounds: paper, night navy, deep navy with a faint diagonal line texture.
+- One accent, bulb gold, used as a fill; gold-ink when gold must be text on a light ground.
+- The logo's blue reserved for form hover and focus outlines on light grounds.
+- Cal Sans at a single weight (400) for every heading, label, button and phone number; system sans for running text.
+- Pill buttons and chips, 24px cards, 16px inner tiles, 10px fields.
+- Motion is a greeting, not a performance: one H1 letter bounce-in and one 12px fade-up, both absent under reduced motion and without JS.
 
 ## Colors
 
-A cold, saturated night palette (hue ~265 in OKLCH) lit by three bulb colors. Warm gold is the only warm UI color.
+A cool night-sky palette (paper, two navies, slate text) warmed by a single bulb gold.
 
 ### Primary
-- **Signal Red** (`signal-red`): fill for the one commit button per view ("Text my request", "Open messages again"). Hover goes to **Signal Red Hot**. It is never used for text or borders. Errors have their own colors.
+- **Bulb Gold** (`bulb-gold`): the one accent. Fills the primary button, the floating text circle, numbered step markers, the dot in label pills, and text selection. Also the colour of accent words inside headings and of icons on dark bands, where it passes contrast.
+- **Bright Bulb** (`bulb-gold-bright`): hover state of gold fills only.
+- **Gold Ink** (`gold-ink`): gold as text or icon on a light ground (5.3:1 on paper): accent words in headings on paper, the header phone icon and hover, the claim icons.
 
 ### Secondary
-- **Bulb Warm Gold** (`bulb-warm`, CSS `--warm`): the interaction light. It covers the focus ring (2px outline, 3px offset), selected tile and chip borders, selected service icons, `::selection`, the caret, the second line of the hero headline, the urgency line and the done-state heading.
-
-### Tertiary (bulb glass, canvas and dots only)
-- **Bulb Red / Bulb White / Bulb Blue** (`bulb-red`, `bulb-white`, `bulb-blue`): base glass colors for the C9 sprites and the small CSS `.dot` bulbs (fact list, step markers, urgency dot). Each has a light highlight, a dark rim and two "off" tones defined in `COLORS` in the script. Strings cycle red, white, blue. These are never used for UI fills or text.
+- **Logo Blue** (`logo-blue`): the logo's blue, used only as the hover and focus outline of form controls and links on light grounds (fields, service tiles, chips, the card's submit button, text links). It keeps "you are here" distinct from the gold "do this" fill.
 
 ### Neutral
-- **Night** (`night`): page ground, footer ground, `theme-color`.
-- **Night Sky** (`night-sky`): the horizon glow, a radial gradient behind the roof at the bottom of the hero.
-- **House** (`house`): the roof polygon, the "how it works" section and the footer's fill above its wire. One color, so the roofline reads as the divider.
-- **Card** (`card`): booking card surface and the code-panel button.
-- **Well** (`well`): inputs, service tiles, chips, the message preview and the code panel. These are wells sunk into the card.
-- **Well Selected** (`well-selected`): a checked tile or chip lifts one step toward the card.
-- **Edge / Edge Hover** (`edge`, `edge-hover`): 1.5px control borders, scrollbar thumb and section hairlines. Hover moves to `edge-hover`.
-- **Cream** (`cream`): primary text. Translucent cream (`rgba(246,240,227,.5–.55)`) is the outline for ghost and call buttons.
-- **Mist** (`mist`): secondary text, subs, hints, captions, footer copy and unselected chip text.
-- **Placeholder** (`placeholder`): input placeholders only.
-- **Error** (`err-text`, `err-edge`): inline error text and the invalid border. They are deliberately pink-salmon so they never read as Signal Red.
+- **Night Navy** (`night-navy`): hero and closing bands; also the input caret.
+- **Deep Navy** (`deep-navy`): the "how it works" band and the footer, always with the diagonal texture; also the code block ground inside the deep band.
+- **Paper** (`paper`): page ground, header, and the resting fill of fields, tiles, chips and the message preview inside the white card.
+- **Card White** (`card-white`): the booking card surface only.
+- **Ink** (`ink`): headings and labels on light, text on gold, and the selected fill of service tiles and chips.
+- **Body Slate** (`body-slate`): running text on light.
+- **Soft Slate** (`soft-slate`): ledes, hints, sub-copy, placeholders, the "(optional)" note.
+- **On Dark** (`on-dark`): headings and primary text on navy.
+- **On Dark Soft** (`on-dark-soft`): running text on navy.
+- **Hairline** (`hairline`): the 1px divider between claim rows.
+- **Error Red** (`error-red`): inline error text and the bad-field border.
 
 ### Named Rules
-**The One Warm Light Rule.** Every "this is active" state uses Bulb Warm Gold: focus, checked, selected, highlighted. Don't introduce a second accent for state.
+**The Bulb Gold Rule.** Gold is a light, not ink: it fills, and anything sitting on it is Ink. On paper or white, gold never appears as text; use Gold Ink instead. On navy, gold text is allowed for accent words and icons.
 
-**The Red Is the Button Rule.** Signal Red fills the one primary action per view and nothing else.
+**The Two Outlines Rule.** On light grounds every hover and focus outline is Logo Blue; on navy and deep bands (hero, how it works, close, footer) the focus outline switches to Bulb Gold. Never use gold as a focus ring on paper.
 
-**The Never-Black Rule.** The darkest value is `well`. Shadows use a navy-black `rgba(2,7,20,…)`, never `#000`.
+**The Ink Selection Rule.** A chosen option turns solid Ink with white text. Selection is never shown in gold, so the only gold in the card is the submit button.
 
 ## Typography
 
-**Display Font:** Anton (fallback 'Arial Narrow', sans-serif), latin subset inlined as base64 `@font-face`.
-**Body Font:** system UI stack (-apple-system, Segoe UI, Roboto, …).
-**Mono:** ui-monospace / SF Mono / Menlo, used only in the embed-snippet code panel (13.5px/1.6).
+**Display Font:** Cal Sans (with Avenir Next, Segoe UI, system-ui)
+**Body Font:** the platform system sans (-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial)
+**Label/Mono Font:** ui-monospace stack, only for the embed snippet code block (13px / 1.55)
 
-**Character:** Anton is condensed, loud, all caps and sign-like, and it matches the client's own site. The system sans keeps the form fast and native-feeling on phones.
+**Character:** a rounded, slightly tight geometric display face that reads warm and confident at any size, paired with the phone's own sans for everything you read at length.
 
 ### Hierarchy
-- **Display** (`display`): hero H1 only, uppercase, `text-wrap: balance`. The second clause sits on its own line in Warm Gold.
-- **Headline** (`headline`): section H2 ("From your website straight to your phone"), uppercase, max 16em.
-- **Title** (`title`): booking card H2, uppercase. 29px at ≤520px. The 30px "Paste this where you want it" heading is the same role.
-- **Title Small** (`title-sm`): done-state heading (Warm Gold) and footer business name. Uppercase.
-- **Body** (`body`): 16px base. Hero pitch scales `clamp(16px, 1.45vw, 20px)` with max 34em. Step copy is max 34ch and embed copy max 44ch. Step titles are system sans at 19px/1.3.
-- **Label** (`label`): legends, field labels, the urgency line (600) and the "Prefer to talk?" line. The 650 weight is used throughout for emphasis: buttons (17px), tile titles (15px) and the call pill (15px).
-- **Meta** (`meta`): hints, notes and errors (13–13.5px). Tile subtitles are 12.5px.
+- **Display** (400, clamp 42px to 80px, 1.02): the hero H1 only, white on navy, max 12ch, balanced.
+- **Headline** (400, clamp 30px to 48px, 1.08): band headings. The booking card heading is a slightly smaller step (clamp 30px to 40px); the snippet panel heading drops to clamp 24px to 30px.
+- **Title** (400, clamp 20px to 23px, 1.2): claim rows, step titles (21px, 22px on desktop), service tile names (17px).
+- **Label** (400, 17px, 1.2): form legends and field labels, in Ink.
+- **Button** (400, 18px, 1): every button and the header phone number (17px, 20px desktop). The closing phone number scales up to clamp 30px to 52px.
+- **Lede** (400, clamp 17px to 19px, 1.5): the hero promise (to 20px) and section ledes, Soft Slate, max 34 to 38ch.
+- **Body** (400, 16px, 1.7): running text, field input text, chips.
+- **Small** (400, 14px to 15px): hints, errors, the "opens your messages" note, tile sub-lines.
 
 ### Named Rules
-**The Anton Is Always Caps Rule.** Anton appears only at weight 400, uppercase, line-height ≤1.1. It's for headings only and never for body text, labels or buttons.
+**The One Weight Rule.** Cal Sans is only ever set at 400. Hierarchy comes from size, never from bolding the display face.
+
+**The Display Speaks Rule.** Anything the customer reads as a heading, a choice, a label or a call to act (buttons, phone numbers, tile names, step numbers) is Cal Sans; anything they read as an explanation is system sans.
 
 ## Layout
 
-- **Container:** 1240px max, 32px gutters (16px at ≤960px).
-- **Hero (desktop):** a two-column grid `minmax(0,1fr) 460px` with a 64px column gap. Copy sits top left, the photo bottom left and the booking card spans both rows on the right. The sky runs under the top bar (`margin-top: -90px`).
-- **Hero (≤960px):** one column at max 560px. Hero facts are hidden. The order is copy, card, photo, and the photo bleeds to the edges. The copy gets 96px of bottom margin so the roof peaks have room above the card.
-- **≤520px:** the card padding tightens to 70/18/22, name and phone stack, and service tiles drop to an icon-over-text layout (min-height 96px).
-- **How it works:** three equal columns of steps (gap 40px), then a 5fr/7fr split for the embed copy and code panel. Both stack at ≤960px.
-- **Footer:** 120px top padding (104px on phone) leaves room for the footer light string. The grid is name/contact on the left and towns on the right.
-- **Embed mode:** everything except the card is `display:none`. The body is transparent, the grid becomes a block at max 480px with 18/8/16 padding, and only the card's own string runs.
-- **Rhythm:** spacing is hand-tuned rather than on a strict scale. Recurring steps are 8 (chips), 10 (tiles, button stacks), 14 (field-to-field), 18 (fieldsets) and 22 (header-to-form, done block).
+One centred column (max 1160px) with a 20px gutter on phones and 40px from 760px. Sections are full-bleed bands with 64px vertical padding on phones and 96px from 760px.
+
+Band order on the full page: paper header (logo left, tap-to-call number right, 72px tall, 84px desktop), textured night-navy hero, paper booking band, textured deep "how it works" band, plain night-navy close, textured deep footer. The footer leaves 96px plus the safe-area inset at the bottom so the floating circle never covers its content.
+
+- **Phones (default):** everything stacks. Hero copy, then two full-width stacked buttons, then the photo card. The booking card comes before the claims list.
+- **760px and up:** hero buttons sit side by side (min 240px each).
+- **1024px and up:** hero splits copy and photo 1 : 1.25; the booking band splits claims (sticky, 40px from top) and card 1 : 1.15 with claims on the left; name and phone pair up; steps go three across; the snippet panel splits 5 : 7; the close puts the big phone number bottom-right.
+- **Phones held sideways (landscape, height 500px or less):** the header shrinks to 52px with an 88px logo, the hero goes two-column with a smaller H1 (clamp 28px to 40px on viewport height) and 48px buttons side by side, so the offer and both buttons fit the first screen.
+- **Narrow phones (380px or less):** tile and chip padding tighten.
+
+**The Card Is The Destination Rule.** Every primary action on the page leads to the booking card or a phone link; nothing else competes for the primary button.
 
 ## Elevation & Depth
 
-Depth comes from tonal layering first. The order from back to front is night, house, card and well, and wells sit *below* the card. Shadows are few, soft, long and navy-tinted, and they only lift objects that sit in front of the scene. Light is the other depth cue: bulbs draw with additive `lighter` halos that bloom over whatever is behind them.
+Depth is tonal first: paper against white, navy against deep, and the diagonal line texture (a 1px white line at 3.5% every 23px, at 135 degrees) on the hero, deep band and footer. Only two things lift, both with soft, navy-tinted ambient shadows. There are no hard offset shadows and no shadows on buttons, tiles or fields.
 
 ### Shadow Vocabulary
-- **Card lift** (`0 34px 70px -24px rgba(2,7,20,.8), 0 8px 22px -10px rgba(2,7,20,.5)`): the booking card only.
-- **Panel lift** (`0 18px 40px -22px rgba(2,7,20,.9)`): the embed code panel.
-- **Primary press** (`0 10px 22px -12px rgba(2,7,20,.8)`): the red button.
-- **Selected tile** (`0 8px 18px -10px rgba(2,7,20,.7)`): a checked service tile.
-- **Bulb glow** (`0 2px 8px rgba(<bulb>, .55)`): CSS `.dot` bulbs. Colored glow is reserved for bulbs.
+- **Card lift** (`box-shadow: 0 18px 50px rgba(13,27,61,.08)`): the booking card on paper.
+- **Embedded card lift** (`box-shadow: 0 8px 30px rgba(13,27,61,.12)`): the same card inside an iframe, tighter so it reads on an unknown host page.
+- **Float lift** (`box-shadow: 0 10px 28px rgba(8,18,46,.3)`): the floating text circle.
 
 ### Named Rules
-**The Only Glow Is a Bulb Rule.** Colored glow and bloom belong to bulbs (canvas halos, `.dot` shadows). UI controls never glow. Their active state is a gold border.
+**The Quiet Texture Rule.** The diagonal texture is faint enough to be felt rather than seen. It belongs to navy grounds only; never on paper or inside the card.
 
 ## Shapes
 
-Soft, friendly rounding that gets larger as the container grows: fields 12px, tiles and buttons 14px, panels 16px, the card 22px (20px on phone), and pills for chips and the call button. Control borders are always 1.5px and hairline dividers 1px `edge`. The two organic silhouettes are the C9 teardrop (canvas bezier, and the CSS `.dot` with `border-radius: 50% / 40% 40% 60% 60%`) and the roof polyline with gable peaks (`ROOF` points, plus a 7px `#1d3363` fascia stroke). The hero photo has no frame. A two-axis gradient mask dissolves its edges into the sky.
+A family of soft rounds, scaled by size: 24px for containers (booking card, hero photo, snippet panel), 16px for elements inside a container (service tiles, the message preview, the code block), 10px for text fields, full pills for buttons, chips and label pills, and circles for the numbered step markers and the floating text circle. Focus outlines take a 6px round. Borders are rare: inputs, tiles and chips carry a 2px transparent border that only colours on hover, focus, error or selection, so states never shift layout.
+
+**The Nested Round Rule.** An element inside a 24px container uses 16px or less; nothing inside the card is rounder than the card except pills.
 
 ## Components
 
 ### Buttons
-- **Shape:** gently rounded (`rounded.tile`), 54px tall, full width, 1.5px border, 650 weight at 17px, with an optional 20px stroke icon (1.9 stroke, round caps).
-- **Primary:** Signal Red fill, white text, translucent cream border, primary-press shadow. Hover goes to Red Hot with a full cream border.
-- **Ghost:** transparent with a translucent cream border. Hover adds a 7% cream wash and a full cream border.
-- **Press:** `translateY(1px)` on `:active`. Transitions run .18s on colors and .12s on transform.
-- **Call pill:** 42px (40px on phone) with a pill radius, used in the top bar.
-- **Text link button:** mist, underlined, cream on hover ("Edit my details").
+- **Shape:** full pill (999px), 56px tall, 26px side padding, Cal Sans 18px, optional 20px stroke icon leading.
+- **Primary:** Bulb Gold fill and border, Ink text. One per view: "Book a free consultation" in the hero, "Text my request" in the card.
+- **Hover / Focus:** primary brightens to Bright Bulb; inside the card buttons also take a 2px Logo Blue outline at 2px offset. Hover styles exist only on devices with a real pointer. Press scales to 0.98.
+- **Ghost (on navy):** transparent, On Dark text, 2px border of On Dark at 70%; hover goes to a full white border and a 10% white wash. On the deep band it hovers with a gold outline.
+- **Line (on light):** transparent, Ink text, 2px Ink border at 35%, hover to full Ink. Used for "Copy message".
+- **Link button:** underlined Ink text with a 35% Ink underline, 44px tall target; hover turns Logo Blue with an outline.
 
-### Chips
-- **Style:** 40px pill on `well`, `edge` border, mist text at 14px.
-- **State:** hover changes the border to `edge-hover`. Checked gets a gold border, cream text and the `well-selected` fill. The checkbox is visually hidden and the focus ring moves to the span.
+### Booking Card (signature)
+The one self-contained component: white, 24px radius, clamp 20px to 32px padding, 20px internal gap, max 600px wide, soft card lift. Heading, a Soft Slate sub-line, then the form at a 22px rhythm.
+- **Service tiles:** a two-column grid of four tinted tiles (Paper, 16px round, min 76px tall), each a Cal Sans name over a Soft Slate sub-line. Selected turns solid Ink with white name and On Dark Soft sub-line. Hover and keyboard focus draw the 2px Logo Blue border. Behaves as a radio group.
+- **Add-on chips:** wrapping row of Paper pills, 48px tall, system 16px text; selected turns Ink with white text. Multi-select.
+- **Fields:** Paper fill, 2px transparent border, 10px round, 52px tall, 16px text (no zoom on iOS), Soft Slate placeholder. Hover and focus colour the border Logo Blue; no outline glow. The date field shows a "Tap to pick a day" placeholder only where iOS renders a blank box. Name and phone pair up from 1024px.
+- **Inline errors:** validated on submit only. A bad field's border turns Error Red, a 15px Error Red sentence appears beneath it saying exactly what to fix, the control gets `aria-invalid`, and focus moves to the first bad field. Each error clears the moment its field becomes valid.
+- **Footnotes:** a centred Soft Slate 15px line under the submit button, then a "Prefer to talk?" line with an underlined call link.
+- **Done state:** the sub-line and form disappear; in their place a "Your text is ready" heading (28px), a short we-voice line, the message preview (Paper box, 16px round, pre-wrapped 16px Ink text), a primary "Open messages again" button, a line "Copy message" button whose label briefly confirms, a Soft Slate note for computer users, and an "Edit my details" link button. The card scrolls into view and the done block takes focus.
 
-### Service tiles (radio cards)
-- **Style:** `well` with an `edge` border, 14px radius and min-height 78px. A 28px line icon (stroke mist, 1.7) sits left of the title (650, 15px) and mist subtitle (12.5px). Two columns.
-- **Icon detail:** each icon has `.lit` dots (its "bulbs") that fill mist at rest and gold when selected.
-- **State:** hover changes the border to `edge-hover`. Checked gets a gold border, the `well-selected` fill and the selected-tile shadow, and the icon turns gold. Invalid gives every tile an `err-edge` border.
+### Embed Mode
+With `?embed=1` the page shows only the booking card: header, hero, claims, how it works, close, footer and floating circle are hidden; the page ground goes transparent; the card sits in a max 536px column with 8px side padding and the tighter embedded lift. The class is set before first paint so the full page never flashes inside the iframe. The card posts its height to the parent on every resize so the iframe never scrolls internally, posts a "done" message on submit, and its call and SMS links open in the top window. No motion runs in embed mode.
 
-### Inputs / Fields
-- **Style:** 50px tall, `well` fill, 1.5px `edge` border, 12px radius, 16px text (prevents iOS zoom). Labels sit above in `label` style.
-- **Focus:** the border turns gold, plus a 2px gold outline at 2px offset on `:focus-visible`.
-- **Error:** `aria-invalid` gives an `err-edge` border and the error text sits below in `err-text`. Errors appear only after a field is touched and clear live while it is being fixed.
-- **Date:** a custom iOS-only placeholder overlay ("blank box" fix), and the picker indicator is tinted to suit the dark scheme.
+### Claims List
+Three rows on paper, each a 40px Gold Ink line icon beside a Cal Sans title, separated by Hairline rules. On desktop the list sits sticky beside the card.
 
-### Booking card (signature)
-Card surface with 22px radius and the card-lift shadow. The top padding is 74px to make room for its light string (a canvas overhanging the card by 6px each side and 14px above). Inside, in order: Anton title, mist sub, an optional urgency line (gold 600 text after a blinking red `.dot`, 2.4s), the form, the red submit button, a mist note, then a hairline and the "Prefer to talk?" ghost call button. On submit the form is replaced by the done state (rises in over .5s `cubic-bezier(.16,1,.3,1)`): a gold title, the message preview in a well using `pre-wrap`, the red and ghost buttons, and an email fallback. Everything is prefixed `gpw-`, so it survives being pasted into a WordPress page.
+### Steps
+Numbered list on the deep band: a 48px Bulb Gold circle with an Ink Cal Sans numeral, a Cal Sans title in On Dark, and a system-sans explanation in On Dark Soft. Stacks on phones, three across from 1024px.
 
-### Light strings (signature motion)
-All three strings run on one engine in the `LIGHT STRINGS` script:
-- **Rope:** pinned clips with 4–6 verlet nodes per span, an initial sine sag of 18% of the span, and slack of 1.12–1.16. Eight constraint passes per frame. The wire can go slack but never stretch. Bulbs hang on every other node and cycle red, white, blue. Each bulb swings on its socket, lagging the wire (it follows 45% of the wire angle, with spring .07 and damping .09).
-- **Forces:** gravity, plus a two-sine wind whose gust swells and fades slowly. Pointer or finger within `pushRadius` shoves nodes outward and passes on some of the pointer's velocity. Bulbs near the pointer brighten by up to 35%.
-- **Render:** a 2px dark-green wire (`#27493a`), clip dots, then the cached unlit sprite with the lit sprite cross-faded over it by brightness, then additive halo sprites. Brightness includes a per-bulb twinkle.
-- **Hero roofline:** a gabled roof polyline (`ROOF`) with clips every 84px (60px on phone) and 19px bulbs (15px on phone), plus snow (46 flakes on desktop, 18 on phone) that parts around the pointer. Desktop sets the eave at the first-screen bottom, above the photo, with peaks clear of the copy. When stacked, the eave sits 32px below the card top, so the card stands on the house. A static SVG roof is shown until JS is ready.
-- **Card progress string:** 5 spans and 16px bulbs, all starting off. `GlowStrings.progress(validFields / 5)` lights the first N bulbs, and each newly lit bulb pops. Lit state survives resizes.
-- **Footer divider:** a full-width string with 17px bulbs (14px on phone) and color offset 1. The `house` color fills everything *above* the wire, so the wire itself is the house/footer edge.
-- **Shared loop:** one `requestAnimationFrame` steps every visible scene. IntersectionObserver pauses offscreen canvases, and the loop sleeps when none are visible and wakes on pointer movement. DPR is capped at 2. Resize rebuilds are debounced 120ms and skip height-only changes (phone URL bar). On submit, `GlowStrings.cheer()` runs a pop chase along every string.
-- **Reduced motion:** the loop never starts, strings are drawn once, bulbs light instantly, and all CSS animation and transitions are off.
-- **Tunables (`TUNE`):** gravity .32, damping .975, windBase .05, windGust .045, windSpeed 1.9, pushRadius 95, push 2.4, carry .16, twinkle .16, snowDesktop 46, snowPhone 18. Change these before changing code.
+### Floating Text Circle
+A single 60px Bulb Gold circle with an Ink chat icon, fixed 16px from the bottom-right safe-area corner. It slides up (0.35s) once the hero has scrolled away and slides down while the booking card is on screen; it is never a bottom bar. Removed in embed mode and when IntersectionObserver is unavailable.
 
-### Embed mode
-`?embed=1` adds `.is-embed` to `<html>` before first paint, so the demo shell never flashes. In embed mode the color-scheme stays normal (otherwise the iframe gets an opaque canvas), card links open in `_top`, and the card posts `gpw-height` on resize and `gpw-done` on submit to the host page. `&urgency=off` adds `.no-urgency`. The `URGENCY` / `URGENCY_TEXT` constants are the in-file switch.
+### Motion
+- **Hero H1 bounce-in:** on load, each letter slides in from 50px right with a slight overshoot (1s, `cubic-bezier(.34,1.56,.64,1)`), 20ms apart; words never break mid-word. When the last letter lands, the plain heading is restored so kerning and selection return. The split is done by script, so without JS, in embed mode, or under reduced motion the heading is plain text from the start.
+- **Fade-up:** elements that start below the first screen rise 12px and fade in (0.4s ease-out) as they enter. Everything is visible at rest; nothing already on the first screen ever hides.
+- **Reduced motion:** smooth scrolling, the fade-up, the H1 split, the float slide and button transitions are all off.
+
+**The Visible At Rest Rule.** No content depends on motion or script to appear. Animation may only add an entrance to something that is already readable without it.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** take every color from `:root` custom properties. Add a variable before adding a literal.
-- **Do** use Warm Gold for every focus, selected and highlight state, with focus rings at 2px and an offset.
-- **Do** keep Anton uppercase at 400 for headings, and the system sans for everything you read or tap.
-- **Do** make new decoration out of the bulb vocabulary (C9 sprites, `.dot` bulbs, `.lit` dots in icons), cycling red, white, blue.
-- **Do** tune motion through `TUNE` and keep every canvas on the one shared loop with IntersectionObserver pausing.
-- **Do** keep any new widget CSS prefixed `gpw-` and check it in `?embed=1` on a transparent ground.
+- **Do** keep Bulb Gold as a fill with Ink on it, and switch to Gold Ink for any gold text or icon on paper or white.
+- **Do** use Logo Blue for hover and focus outlines on light grounds and Bulb Gold for focus on navy bands.
+- **Do** show selection as solid Ink with white text, in tiles and chips alike.
+- **Do** set every heading, label, button and phone number in Cal Sans at weight 400.
+- **Do** give every tap target at least 44px, buttons 56px, fields 52px, chips 48px.
+- **Do** keep the diagonal texture on navy grounds only, at its faint 3.5% white.
+- **Do** gate hover styles behind a real pointer so taps never leave them stuck on.
+- **Do** keep the booking card self-contained so it renders identically on the page and in embed mode.
 
 ### Don't:
-- **Don't** use pure black or white surfaces. The ground is navy and text is cream.
-- **Don't** use Signal Red for anything but the primary button. Errors use the salmon `err` pair.
-- **Don't** add glows, gradients or colored shadows to UI controls. Glow belongs to bulbs.
-- **Don't** start a second animation loop or keyframe the strings. Motion is physics, and it must stop under `prefers-reduced-motion`.
-- **Don't** add a divider line between hero and house or between house and footer. The roof and the footer wire are the dividers.
+- **Don't** use gold as text on paper or white, or as a focus ring on light grounds.
+- **Don't** bold Cal Sans or fall back to a condensed caps display face.
+- **Don't** put shadows on buttons, tiles or fields, and don't use hard offset shadows anywhere.
+- **Don't** add a sticky bottom bar; the single floating circle is the only fixed element.
+- **Don't** hide content behind motion or script; reduced motion and no-JS must show the finished page.
+- **Don't** add eyebrow labels above headings on new surfaces; the three label pills in the current build are carried, not a pattern to extend.
+- **Don't** bring back the retired festive world: light-string canvases, red buttons, seasonal mascots.

@@ -1,95 +1,88 @@
-# Glow Pro Exterior Lighting — handoff at ~60%
+# Glow Pro Exterior Lighting — handoff at ~60% (calm-style revamp)
 
-**Live:** https://10elizabethbell.github.io/glowProExteriorLighting/ (widget only: `?embed=1`) · **Repo:** https://github.com/10elizabethbell/glowProExteriorLighting (public) · **Built:** 2026-10-08 from Muse brief (brief.md, Muse run 2026-10-08; the brief was revised mid-build and the build follows the revision)
+**Live:** https://10elizabethbell.github.io/glowProExteriorLighting/ (card only: `?embed=1`) · **Repo:** https://github.com/10elizabethbell/glowProExteriorLighting (public) · **Built:** 2026-10-08 from Muse brief (Muse run 2026-10-08) · **Revamped:** 2026-10-19 to the calm band style
 
-## What's built
-- **Widget, not a site.** Per the brief, this is an embeddable "Book your free consultation" card for glowpronj.com, shown on a short demo page. `index.html?embed=1` renders only the card (transparent background), and `&urgency=off` hides the holiday line.
-- **Proof:** work-01 from glowpronj.com (a two-story roofline install at night) sits under the hero copy. Its black sky is masked so it dissolves into the page sky. On phones it comes after the card.
-- **World:** a Jersey Shore roofline at night strung with C9 bulbs in the logo's red, warm white and blue; navy winter sky with light snow; Anton headings (their site's display face, inlined as a 5.6KB subset).
-- **Signature motion:** verlet-rope light strings with layered gust wind. Bulbs swing on their sockets, and the pointer or a finger shoves the wire and brightens nearby bulbs. Three strings, all in one shared loop:
-  - the hero roofline. On desktop it sits at the bottom of the first screen, with peaks sized to clear the copy. On phones it sits just above the card, so the card stands on the house.
-  - the top of the card.
-  - the how→footer seam, where the house color follows the swaying wire.
-- **The authored moment:** the card's 10 bulbs light two at a time as each of the 5 required answers becomes valid. On submit, a chase runs along both strings.
-- **Booking:** service picker (4), optional add-ons (4), name, phone, address, preferred week (date input, reported as "week of Mon, Nov 9"). Inline plain-language errors. Submit opens `sms:+16092228146?&body=…`; a done state shows the message with "Open messages again", "Copy message" and "Edit my details". A "Prefer to talk?" button calls `tel:+16092228146`. The company email appears only in the footer. In embed mode the links target `_top` so they leave the iframe.
-- **Embed:** instructions are commented at the top of the file, and the snippet is shown on the demo page with a Copy button. The iframe reports its height to the parent with postMessage, so it fits without an inner scrollbar.
-- One shared rAF loop. Rendering pauses when the strings are off screen; reduced motion gets one still frame. No tracking, no external requests.
+## Revamp, 2026-10-19: what changed
+Ellie made the calm band style (from lpmr.co.uk, `calm-photo-style.md`) the house default. The business hasn't been contacted yet, so the page was rebuilt from scratch on DPG's `index.html`. The old light-string world is still in git history (`10c3dfc`).
+- **Removed:** every canvas and animation from the old build:
+  - the swinging C9 light strings on the roof, the card and the footer
+  - the bulbs that lit up as the form filled, and the chase on submit
+  - the wreath, Santa's sleigh, the holly and the snowy yard of trees and presents
+  - the Anton font, the red buttons and the dark card
+  - the urgency line ("Holiday slots fill fast — book early") and its `&urgency=off` switch: that line isn't in the current brief, so it read as an invented claim
+- **Look:** paper header and paper booking band; a night-navy hero; a deep navy "how it works" band with the faint line texture; a navy close; a deep footer.
+  - **Accent:** one warm-white bulb gold (#ffc24a), used only as a fill with navy text on it. Where gold has to be text on light, it uses the darker #8a5a00.
+  - **Form outlines:** the logo's blue (#0b7fd1) on hover and focus, so they stand out from the gold buttons.
+  - **Type and shapes:** Cal Sans headings, 24px cards and pill buttons.
+- **Header:** their real logo (the black-line transparent PNG from glowpronj.com) on the left, the tap-to-call number top right.
+- **Hero:** eyebrow pill "Holiday & year-round lighting".
+  - **H1:** "Your home, lit up in Ocean & Monmouth." It bounces in letter by letter.
+  - **Promise:** their own line, "We handle the ladders, the lights, and the details…".
+  - **Buttons:** Book a free consultation (gold, scrolls to the card) and Text us (outlined, `sms:`).
+  - **Photo:** their work-01 night photo, cropped to 1024x520, in a 24px card. It sits under the copy on phones and beside it on desktop.
+- **Booking card** (still the deliverable; still the only thing `?embed=1` shows):
+  - **Fields:** an eyebrow "Free, no obligation estimate", 4 service tiles, 4 optional add-on chips, name, phone, the address of the property, and a preferred week.
+  - **Errors and submit:** inline errors in plain sentences, then "Text my request".
+  - **Done state:** the message written out, "Open messages again", "Copy message" and "Edit my details". There's also a quiet "Prefer to talk? Call (609) 222-8146" link, because whether that number takes texts is unknown.
+  - **Embed:** the iframe height now shrinks again after submit.
+- **Beside the card** (desktop) or **under it** (phone): "You enjoy the glow. We do the rest." with three claims from their own site: design, installation, maintenance and removal; commercial-grade weather-resistant LEDs; fully licensed and insured.
+- **How it works** (for the owner): three steps plus the embed snippet with a Copy button. The snippet's default height is now 1240px, and the postMessage resizes it.
+- **Close:** name, "Fully licensed and insured.", the 20 towns as plain text, and a big tap-to-call number. **Footer:** name, area, phone and the email (the only email on the page).
+- **Floating text circle** (`CONFIG.FLOAT`): hidden on the hero, shown below it, hidden while the booking card is on screen, and off in embed mode.
+- **Motion:** the H1 bounce-in and one 12px fade-up (`.rise`), nothing else. Under reduced motion or with JS off, everything shows at once (checked in Chromium and WebKit).
+- **Phones held sideways** (≤500px tall) get a compact header and a two-column hero, so both buttons fit on the first screen.
+- **New `og.png`:** 1200x630, taken from the new hero. The favicon and apple-touch-icon are unchanged: both are the logo's roofline-and-bulbs mark.
+- **Docs:** `PRODUCT.md` updated; `DESIGN.md` rewritten from the built page.
 
 ## Assumptions I made
-- **Navy ground, not their black.** glowpronj.com uses black/near-black with #CC0000 red. House rule: no black grounds, so I used deep night navy. Their red sits on the primary button as #e0262b, brightened slightly so white text passes 4.5:1 on navy.
-- **Logo** taken from their site (the white transparent-background PNG), converted to a 400px WebP.
-- **Service names** are shortened for the picker ("Holiday lights / Residential install"). The full wording from their site goes into the text message.
-- **"Licensed & insured"** and "commercial-grade LEDs" plus "design, install, maintenance & takedown" are copied from their homepage claims. Nothing new was invented.
-- **Card sub-copy** promises a follow-up for a "photo-based estimate and custom design". That's their own step 1 wording, but the follow-up promise is mine.
-- **Hosting route:** WordPress's Media Library blocks .html uploads, so the instructions say to upload with the host's File Manager or SFTP to `/booking-widget/index.html`. This needs confirming against their host.
-- The SMS body uses the `?&body=` form, which iOS and Android both accept.
+- **Gold accent, not their red.** The calm style wants one warm accent used as a fill with navy text on it. Navy on their red #CC0000 is about 3.6:1, which fails, so I used the warm-white glow of their C9 bulbs. Their red, white and blue stay in the logo and favicon.
+- **Navy, not their black,** because of the house rule against black grounds.
+- **Hero photo:** the calm style asks for "the best wide photo under a navy overlay". work-01 is only 1024px wide, so a full-bleed hero would blur on desktop. It sits in a card next to the copy instead, so no white text sits on the photo and no pixel sampling is needed.
+- **Audience not treated as 40+.** The brief doesn't flag it. Ocean County does have many retirement communities (Manchester, Berkeley). If Ellie sees them as 40+, the fix is two lines: remove the bounce-in and fade-up blocks, and raise body text to 18px.
+- **Copy I wrote:**
+  - "Your home, lit up in Ocean & Monmouth."
+  - "You enjoy the glow. We do the rest.", adapted from their "so you can simply enjoy the glow"
+  - "We'll design it around your home and look after it like it's our own."
+  - "we'll be in touch to set up your free consultation", from their own "we will schedule a free consultation"
+  - None of these add facts.
+- **Service tiles** use short names, but the full wording from their site goes into the text message. "We" voice, as their site uses.
 
 ## Placeholders and gaps
-- Only work-01 is used. work-02 (pathway light) has an SUV in the background, and work-03 (brick home) has two people silhouetted. Both are unused until cropped or cleared.
-- Three real testimonials on their site (Sarah M. of Toms River, Mike D. of Manasquan, Lauren P. of Freehold) are **not** on the page. One could go under the card's submit button if Ellie wants social proof inside the widget.
-- The Muse brief says "logo: none found". I took it from glowpronj.com's schema markup (the transparent white PNG).
-- No hours, no owner name, no reviews, no prices (none in the brief, so none on the page).
-- The urgency line is a plain toggle with no date. Its wording comes from the brief.
+- Only work-01 is on the page. work-02 has an SUV in frame and work-03 has two people in frame, so both are still unused.
+- **No Facebook link.** The brief found no business page, only a group post, so there's nothing to link under the photo or in the footer.
+- **Three real testimonials** from glowpronj.com aren't on the page: Sarah M. (Toms River), Mike D. (Manasquan) and Lauren P. (Freehold). The widget scope kept them off.
+- No hours, owner name, prices or Google rating (none in the brief).
+- **Public repo history:** the first two commits contain `brief.md` (Muse's prospecting notes) and `TRIGGER.md`. Both have been untracked since 2026-10-08 but are still in history. The repo was made public on Ellie's call on 2026-10-08. If those notes shouldn't be public, the history needs rewriting.
 
 ## Questions for the owner
-- **Does (609) 222-8146 take texts?** The brief says unknown. If it's a landline, every SMS request is lost: change `SMS_TO` in the widget script. Call and email fallbacks are on the card either way.
-- Do they have a Facebook page? If so, it goes under the work photo and in the footer.
-- Which services matter most this season (picker order)? Should add-ons stay, or is a shorter form better?
-- Is there a service-area cutoff? An address outside Ocean or Monmouth County currently goes through without a check.
-- Who manages their WordPress and hosting (to place the file)?
+- **Does (609) 222-8146 take texts?** If it doesn't, every text request is lost: change `CONFIG.SMS_TO`. The call link stays on the card either way.
+- Do you have a Facebook page? It would go under the work photo and in the footer.
+- Can we use photos without people or cars in them, and before/afters?
+- Which service matters most this season (it sets the tile order)? Should add-ons stay, or should the form be shorter?
+- Is there a service-area cutoff? Any address goes through today.
+- Who manages your WordPress and hosting, so we can upload the file?
 
-## Outreach flags (from the brief + my scan of glowpronj.com, 2026-10-08)
-- Their site still shows the placeholder **"Call 555 123 4567"**: the brief says the footer, and my scan also found it in a second copy of the header menu (likely the mobile one). The other header copy shows the real 609 number.
-- The homepage still advertises **"Reserve your spot before September 30 for 10% off … plus an extra $200 off"**, which is now expired. The banner "Get 10% Off Your Christmas Light Installation!" is still up.
+## Outreach flags (brief + scan of glowpronj.com, 2026-10-08)
+- Their site still shows the placeholder **"Call 555 123 4567"** in the footer, and in a second header menu copy (probably the mobile one).
+- The homepage still advertises the expired "Reserve your spot before September 30…" discount.
 - One "Why choose" list repeats "Complete all inclusive package…" four times.
 
-## Phone-first pass (2026-10-08, Ellie's rule relayed from the blessedMobileDetailing session)
-- CSS rewritten phone-first: base styles target 360–430px, then `min-width: 521px` and `min-width: 961px` layers.
-- First phone screen: logo, a call pill, the headline, the pitch (what and where) and the lit roofline. On short phones a sticky dock adds **Book free consultation** (jumps to the card) and a 56px call button. The dock hides while the picker or the card's buttons are on screen, while someone is typing, and in embed mode.
-- Sizes: buttons 56px tall, chips and links 44px+, inputs 52px. Text is 16px for body and inputs, never under 14px. No sideways scroll at 360px (checked programmatically).
-- The photo's data loads after the scripts, so the card and contact buttons work first. Copy buttons report when the clipboard is blocked (Facebook's in-app browser) and point to press-and-hold instead.
-- Repo visibility: **public** since 2026-10-08 (Ellie's call), with GitHub Pages serving main / root. `brief.md` and Muse's `TRIGGER.md` were committed in the first two commits. Both are now untracked and gitignored but still in history. Raw `src-assets/` was never committed.
-
-## Festive pass (2026-10-08, Ellie: "more festivity around the rest of the page")
-- **Wreath** hangs from the left gable of the hero roof on a red ribbon. It has mini bulbs, a bow and berries, and it swings in the wind and when the pointer or a finger shoves it.
-- **Santa's sleigh** with four reindeer (Rudolph's nose glows) crosses the hero sky every ~25s and leaves gold sparkle dust. Go near him and he hops and bursts sparkles. On desktop he climbs out over the top right; on phones he crosses the gap above the roof. He is off under reduced motion.
-- **Snowy yard** at the bottom of the footer: lit trees (7 on desktop, 4 on phones) with spiral strands and stars, and wrapped presents in the logo colors. Trees sway away from the pointer and their bulbs brighten; tapping a tree runs a light chase up to its star. Presents hop when nudged or tapped. Snow falls. Submitting the form chases every tree as part of the cheer.
-- **Holly** sprig on the card's top-right corner (it rustles, and jiggles each time a new pair of bulbs lights) and after the "how" heading. On the card it is a holiday touch: `&urgency=off` hides it along with the urgency line.
-- All of it runs in the same animation loop and pauses off screen. No images were added (everything is drawn in code), so the file grew by about 25KB.
-
-## Finishing-rules pass (2026-10-17, relayed from the freelance coordinator session)
-- Removed: the "Demo one-pager — free sample." footer line, the "Booking widget demo" header note, the photo caption, the hero's services/area line and facts row, the card's email link and the done state's "email it" option, and the **sticky Book/Call dock on phones** (the phone-first pass above is superseded on that point).
-- Hero lead is now their own line: "We handle the ladders, the lights, and the details so you can sit back, relax, and enjoy your home." The card lead speaks to what we take off the customer's hands instead of describing the process.
-- Hover and focus outlines in one accent (warm gold #ffd27a; the button fill is red) on service boxes, add-on chips, inputs, buttons, the header number, the snippet button and links.
-- Favicon (inline SVG) and `apple-touch-icon.png` drawn from the logo's mark: the roofline with red, white and blue bulbs. `og.png` (1200x630) plus og/twitter tags pointing at the live URL.
-- **Not applied, and why:**
-  - **Facebook link:** the brief found no standalone Facebook page (only a group post), so there's nothing to link. Ask the owner for one.
-  - **Call button on the card:** the brief requires a "Prefer to talk?" tap-to-call button. On tall desktop screens it can be in view at the same time as the header number. It stays because the brief asks for it, and the card also works on its own when embedded.
-  - **"How it works" and the embed section:** this is a widget build, so the section that tells the owner how to paste it in stays.
-  - **Impeccable in every mode:** skipped for this pass, as the coordinator instructed.
-
-## Review round (finish reviewer, 2026-10-08)
-- Applied:
-  - roofline in the first viewport
-  - done state scrolls into view (and tells the parent page in embed mode)
-  - no opaque iframe canvas in embed
-  - texts-unknown copy and setup note
-  - iOS empty-date placeholder
-  - matching button outlines
-  - footer light-string divider
-- Rejected: rewording the urgency line. The brief specifies "Holiday slots fill fast — book early" verbatim, and it stays a toggle with no deadline.
-
 ## Ideas not built (yours to pick)
-- **Runner-up world:** a permanent-LED eave track whose pixels chase color under the pointer, with a color swatch picker in the card (sells their smart-LED line).
-- A quick-pick row of time windows (morning/afternoon/evening) next to the week.
-- A "Send a photo of your house" nudge in the done state, since their estimate is photo-based (MMS can't be pre-attached, but the copy can ask for it).
-- A sticky "Book" pill on phones for the demo page.
-- Bulbs that snap off the string and fall into the snow if flicked hard (Ellie's "break free" pattern).
-- A light-mode card variant if their page section behind the iframe is white. The navy card currently reads as a deliberate night panel.
+- **Impeccable findings kept on purpose (Ellie's calm-style choices):** the craft floor bans eyebrow pills, and the detector flags the diagonal band texture ("repeating-stripes-gradient"). Both stay. The bounce-in, the floating circle and Cal Sans also stay.
+- **Finish reviewer's "phone number twice on the last phone screen"** (the close's big number plus the footer line): not applied. The calm-style footer carries the phone, and the finishing rules allow the close and footer to repeat it.
+- **The three testimonials:** they could go under the claims on desktop, which would also fill the empty left column there, or one could sit under the card's submit button.
+- **Opt-in signature motion (runner-up worlds from their trade):**
+  1. A permanent-LED eave track whose pixels chase colour under your finger. This one fits best, since it sells their smart-LED line.
+  2. The old swinging C9 roofline, which is in git history.
+  3. A path of landscape lights that switch on as you scroll.
+  4. Tree-wrap spirals.
+- Atkinson Hyperlegible for body text, if the audience turns out older.
+- A "Send a photo of your house" nudge in the done state, since their estimate is photo-based.
+- Time-window chips (morning, afternoon, evening) next to the week.
+- A white card already suits their dark site, but a version tinted to their section colour could be offered.
 
 ## Not verified
-- Real-device touch on iOS/Android, and the SMS handoff opening Messages with the body intact (iOS Safari inside an iframe especially).
-- Iframe height postMessage on a real WordPress/Elementor page.
-- Frame rate on older phones. The hero rope is about 100 nodes with 8 constraint passes.
-- Date-input styling on iOS Safari (it uses the native picker).
-- `pitch-site/scripts/shoot.sh` didn't produce phone.png on this run. I captured the phone screenshot manually with the same iframe method.
+- Real-device touch, and the SMS handoff opening Messages with the body intact, especially iOS Safari inside an iframe.
+- The iframe height postMessage on a real WordPress/Elementor page.
+- Date input styling on iOS (it uses the native picker; the "Tap to pick a day" placeholder only shows on iOS).
+- Cal Sans loading inside Facebook's in-app browser. If it's blocked, the page falls back to Avenir Next / Segoe UI.

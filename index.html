@@ -60,6 +60,7 @@
   /* off-white paper, two night-sky navies, one warm-white bulb gold */
   --paper:#f4f6fb;       /* page ground */
   --card:#ffffff;
+  --field:#e6ecf5;       /* input and chip fill on the white card (paper on white was ~1.08:1) */
   --ink:#0d1b3d;         /* headings, text on gold */
   --body:#2a3650;        /* running text on light */
   --soft:#4a5670;        /* secondary text on light */
@@ -158,7 +159,7 @@ section{padding:64px 0}
 .field label.lbl,.field legend{font:400 17px/1.2 var(--display);color:var(--ink);padding:0}
 .field small{font:400 14px/1 var(--text);color:var(--soft);margin-left:4px}
 fieldset{border:0;margin:0;padding:0;min-width:0}
-input[type=text],input[type=tel],input[type=date]{width:100%;font:16px/1.4 var(--text);color:var(--ink);background:var(--paper);border:2px solid transparent;border-radius:var(--r-field);padding:13px 14px;min-height:52px;caret-color:var(--navy);transition:border-color .15s;-webkit-appearance:none;appearance:none}
+input[type=text],input[type=tel],input[type=date]{width:100%;font:16px/1.4 var(--text);color:var(--ink);background:var(--field);border:2px solid transparent;border-radius:var(--r-field);padding:13px 14px;min-height:52px;caret-color:var(--navy);transition:border-color .15s;-webkit-appearance:none;appearance:none}
 input[type=date]{display:block}
 input::placeholder{color:var(--soft)}
 input[type=text]:focus,input[type=tel]:focus,input[type=date]:focus{outline:none;border-color:var(--focus)}
@@ -167,15 +168,15 @@ input[type=text]:focus,input[type=tel]:focus,input[type=date]:focus{outline:none
 /* service picker: four tinted tiles */
 .svcs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .svcs input,.chips input{position:absolute;width:1px;height:1px;opacity:0;margin:0}
-.svcs label{display:grid;align-content:center;gap:2px;min-height:76px;padding:12px 14px;border-radius:16px;background:var(--paper);border:2px solid transparent;cursor:pointer;transition:border-color .15s,background-color .15s,color .15s}
+.svcs label{display:grid;align-content:center;gap:2px;min-height:76px;padding:12px 14px;border-radius:16px;background:var(--field);border:2px solid transparent;cursor:pointer;transition:border-color .15s,background-color .15s,color .15s}
 .svcs b{font:400 17px/1.15 var(--display);color:var(--ink)}
 .svcs span{font-size:14px;line-height:1.3;color:var(--soft)}
 .svcs input:checked+label{background:var(--ink)}
 .svcs input:checked+label b{color:#fff}
 .svcs input:checked+label span{color:var(--on-dark-soft)}
-.svcs input:focus-visible+label,.chips input:focus-visible+label{border-color:var(--focus)}
+.svcs input:focus-visible+label,.chips input:focus-visible+label{outline:3px solid var(--focus);outline-offset:3px}
 .chips{display:flex;flex-wrap:wrap;gap:10px}
-.chips label{display:inline-flex;align-items:center;min-height:48px;padding:0 18px;border-radius:var(--pill);background:var(--paper);border:2px solid transparent;font:16px/1 var(--text);color:var(--ink);cursor:pointer;transition:border-color .15s,background-color .15s,color .15s}
+.chips label{display:inline-flex;align-items:center;min-height:48px;padding:0 18px;border-radius:var(--pill);background:var(--field);border:2px solid transparent;font:16px/1 var(--text);color:var(--ink);cursor:pointer;transition:border-color .15s,background-color .15s,color .15s}
 .chips input:checked+label{background:var(--ink);color:#fff}
 .err{display:none;font-size:15px;line-height:1.4;color:var(--error)}
 .field.bad .err{display:block}
@@ -286,6 +287,8 @@ footer a:hover{color:var(--gold)}
   .js .rise.below{opacity:1;transform:none}
   .hero h1 .c{animation:none;opacity:1;transform:none}
 }
+/* error border must survive focus and hover (submit focuses the bad field) */
+.field.bad input[type=text],.field.bad input[type=tel],.field.bad input[type=date],.field.bad input[type=text]:focus,.field.bad input[type=tel]:focus,.field.bad input[type=date]:focus,.field.bad input[type=text]:hover,.field.bad input[type=tel]:hover,.field.bad input[type=date]:hover{border-color:var(--error)}
 </style>
 </head>
 <body>
